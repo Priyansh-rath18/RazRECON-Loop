@@ -123,24 +123,38 @@ def render_priority_scoreboard(case_detail):
 def render_expected_vs_observed(case_detail):
     st.markdown("**Expected vs. Observed**")
     calc = case_detail["agent_investigation"]["evidence"].get("calculation", "")
-
     expected_net = case_detail["stage2_findings"].get("lifecycle_check", {}).get("expected_net")
     actual_net = case_detail["stage2_findings"].get("lifecycle_check", {}).get("actual_net")
 
     if expected_net is not None and actual_net is not None:
-        gap = actual_net - expected_net
-        c1, c2 = st.columns(2)
-        with c1:
-            st.metric("EXPECTED NET", f"₹{expected_net:,.2f}")
-        with c2:
-            st.metric("OBSERVED", f"₹{actual_net:,.2f}", delta=f"₹{gap:,.2f}", delta_color="inverse")
-        st.caption(f"GAP: ₹{abs(gap):,.2f}")
+        difference = actual_net - expected_net
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Expected Net", f"₹{expected_net:,.2f}")
+        c2.metric("Observed", f"₹{actual_net:,.2f}")
+        c3.metric("Difference", f"₹{difference:+,.2f}")
+
+        if abs(difference) < 0.01:
+            st.success("✓ Expected and observed amounts reconcile.")
+        else:
+            st.error(f"⚠ ₹{abs(difference):,.2f} discrepancy identified.")
 
     if calc:
-        with st.expander("Full calculation"):
+        with st.expander("Show calculation"):
             st.code(calc)
     elif expected_net is None:
         st.caption("No calculation was recorded for this case.")
+
+
+def render_lifecycle_bar():
+    st.markdown(
+        """
+        <div style="text-align:center; font-size:1.05rem; padding: 8px;">
+            <b>ORDER</b> &nbsp;→&nbsp; <b>PAYMENT</b> &nbsp;→&nbsp;
+            <b>REFUND</b> &nbsp;→&nbsp; <b>SETTLEMENT</b> &nbsp;→&nbsp; <b>BANK</b>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 
 def render_case_journey(case_detail):
@@ -206,15 +220,24 @@ with tab_a:
     total_amount_at_risk = sum(r["amount_at_risk"] for r in audit_trail)
     reject_count = sum(1 for r in audit_trail if r["policy_decision"]["final_action"] == "REJECT_ACTION")
     auto_count = sum(1 for r in audit_trail if r["policy_decision"]["final_action"] == "AUTO_RESOLVE")
+    review_count = sum(1 for r in audit_trail if r["policy_decision"]["final_action"] == "REVIEW")
+    escalate_count = sum(1 for r in audit_trail if r["policy_decision"]["final_action"] == "ESCALATE")
+    match_rate = eval_metrics["match_rate"]
 
-    col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Payment Lifecycles Processed", total_lifecycles,
+    col1, col2, col3, col4, col5 = st.columns(5)
+    col1.metric("Payment Lifecycles", total_lifecycles,
                  help="Each lifecycle = Order → Payment → Refund → Settlement → Bank")
-    col2.metric("Exceptions Found", total_exceptions)
-    col3.metric("Amount at Risk", f"₹{total_amount_at_risk:,.0f}")
-    col4.metric("🔴 Unsafe Actions Blocked", reject_count)
+    col2.metric("Match Rate", f"{match_rate*100:.1f}%",
+                 help="Share of payment lifecycles correctly reconciled by the deterministic layer")
+    col3.metric("Exceptions", total_exceptions)
+    col4.metric("Amount at Risk", f"₹{total_amount_at_risk:,.0f}")
+    col5.metric("🔴 Actions Blocked", reject_count)
 
-    st.caption(f"🟢 {auto_count} auto-resolved safely · 🔴 {reject_count} unsafe action(s) blocked · click below to trace any case")
+    st.caption(
+        f"**{match_rate*100:.1f}% match rate** — "
+        f"{int(match_rate*eval_metrics['total_records'])} / {eval_metrics['total_records']} "
+        f"lifecycles correctly reconciled against Stage 3 ground truth."
+    )
 
     highest_priority_case = df_queue.iloc[0]
     if st.button(f"👉 Jump to highest-priority case: {highest_priority_case['Case ID']} ({highest_priority_case['Payment ID']})"):
@@ -225,18 +248,22 @@ with tab_a:
     st.subheader("🛡️ System Reliability")
     st.caption("Source: Stage 3 held-out evaluation harness")
 
-    rcol1, rcol2, rcol3, rcol4 = st.columns(4)
-    rcol1.metric("False-Resolution Rate", f"{eval_metrics['false_resolution_rate']*100:.1f}%",
-                  help="Cases the deterministic layer incorrectly marked clean, from Stage 3's held-out evaluation")
+    rcol1, rcol2, rcol3, rcol4, rcol5 = st.columns(5)
+    rcol1.metric("Match Rate", f"{eval_metrics['match_rate']*100:.1f}%")
     rcol2.metric("Match Precision", f"{eval_metrics['exception_precision']*100:.1f}%")
     rcol3.metric("Match Recall", f"{eval_metrics['exception_recall']*100:.1f}%")
-    rcol4.metric("Records Evaluated", eval_metrics['total_records'])
+    rcol4.metric("False-Resolution", f"{eval_metrics['false_resolution_rate']*100:.1f}%")
+    rcol5.metric("Cases Evaluated", eval_metrics["total_records"])
 
+    automation_rate = round(auto_count / total_exceptions * 100, 1) if total_exceptions else 0
     st.caption(
-        f"**We automated {round(auto_count/total_exceptions*100,1)}% of exceptions. "
-        f"0 unsafe actions were permitted by the policy engine in the evaluated cases** "
-        f"— a stronger claim for a financial system than automation rate alone."
+        f"**{automation_rate}% of flagged exceptions were auto-resolved without human "
+        f"intervention.** Policy engine permitted 0 unsafe actions in the evaluated cases."
     )
+
+    human_required = review_count + escalate_count
+    st.markdown(f"**Human Attention Required: {human_required} / {total_exceptions} exceptions**")
+    st.caption(f"REVIEW: {review_count} · ESCALATE: {escalate_count}")
 
     st.divider()
     st.subheader("Distributions")
@@ -308,13 +335,13 @@ with tab_b:
     st.session_state.selected_case = selected_case_id
     case_detail = next(r for r in audit_trail if r["case_id"] == selected_case_id)
 
+    st.markdown("### Case Summary")
     ic1, ic2, ic3, ic4 = st.columns(4)
     ic1.metric("AT RISK", f"₹{case_detail['amount_at_risk']:,.0f}")
-    with ic2:
-        st.caption("ROOT CAUSE")
-        st.markdown(f"### {case_detail['agent_investigation']['root_cause']}")
-    ic3.metric("PRIORITY", f"{case_detail['priority']['priority']} · {case_detail['priority']['priority_score']}/{PRIORITY_MAX_SCORE}")
+    ic2.metric("PRIORITY", f"{case_detail['priority']['priority']} · {case_detail['priority']['priority_score']}/{PRIORITY_MAX_SCORE}")
+    ic3.metric("CONFIDENCE", f"{case_detail['agent_investigation']['confidence']*100:.0f}%")
     ic4.metric("FINAL ACTION", case_detail['policy_decision']['final_action'])
+    st.markdown(f"**Root Cause:** `{case_detail['agent_investigation']['root_cause']}`")
 
     st.divider()
 
@@ -322,6 +349,9 @@ with tab_b:
 
     with col_left:
         st.markdown(f"### {case_detail['payment_id']}")
+
+        render_lifecycle_bar()
+        st.caption(f"Exception detected at Settlement ↔ Bank reconciliation for {case_detail['payment_id']}")
 
         st.markdown("**Data lineage:**")
         records = case_detail["agent_investigation"]["evidence"].get("records_examined", [])
@@ -379,6 +409,7 @@ with tab_c:
 
     if st.button("▶ Replay Investigation", key="trace_replay_btn"):
         placeholder = st.empty()
+        progress = st.progress(0)
         base_time = datetime.now()
         with placeholder.container():
             st.markdown(f"`{base_time.strftime('%H:%M:%S')}`  **EXCEPTION RECEIVED**")
@@ -395,6 +426,7 @@ with tab_c:
                     st.caption(f"Input: `{s['args']}`")
                     st.caption(f"↳ Why: {why}")
             time.sleep(0.6)
+            progress.progress((i + 1) / len(selected_trace["trace"]))
 
         st.markdown("### Final Summary")
         st.info(selected_trace["final_summary"])
@@ -425,6 +457,7 @@ with tab_c:
             amt_ok = reject_demo['amount_at_risk'] < 50000
             st.markdown(f"{'✅' if amt_ok else '❌'} Amount < ₹50,000")
             st.markdown("❌ Refund exceeds payment (hard rule)")
+            st.markdown("**Decision:** Hard safety rule overrides confidence.")
             st.error("ACTION NOT PERMITTED")
     with arrow2:
         st.markdown("<h2 style='text-align:center;'>→</h2>", unsafe_allow_html=True)
@@ -465,8 +498,8 @@ with tab_c:
 with tab_d:
     st.subheader("🔄 Closed-Loop Verification & Recovery")
     st.caption(
-        "The system detects when an expected outcome wasn't achieved and changes the "
-        "case's decision pathway — it never rewrites financial truth."
+        "The system verifies the outcome independently and re-routes the case when "
+        "verification fails — it never rewrites financial truth."
     )
 
     scenarios = load_verification_scenarios()
@@ -526,3 +559,15 @@ with tab_d:
         "None of the real exceptions in this dataset happened to trigger a re-route, so "
         "these scenarios demonstrate the capability directly."
     )
+
+
+# ============================================================
+# FOOTER
+# ============================================================
+st.divider()
+st.caption(
+    "**AI Finance Controller** · Payment → Refund → Settlement → Bank · "
+    "Deterministic reconciliation + agentic investigation + policy-gated action + "
+    "independent verification · Evaluation dataset: 200 synthetic payment lifecycles "
+    "with controlled ground-truth mutations."
+)

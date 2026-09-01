@@ -1,0 +1,11 @@
+{
+  "total_records": 200,
+  "true_clean": 128,
+  "true_exception": 65,
+  "false_clean": 7,
+  "false_exception": 0,
+  "match_rate": 0.965,
+  "exception_precision": 1.0,
+  "exception_recall": 0.9028,
+  "false_resolution_rate": 0.0972
+}

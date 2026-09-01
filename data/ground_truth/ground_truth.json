@@ -1,0 +1,1824 @@
+[
+  {
+    "payment_id": "PAY-00112",
+    "what_happened": {
+      "mutation_type": "MISSING_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_BANK_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement exists but no corresponding bank credit was found."
+    }
+  },
+  {
+    "payment_id": "PAY-00093",
+    "what_happened": {
+      "mutation_type": "MISSING_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_BANK_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement exists but no corresponding bank credit was found."
+    }
+  },
+  {
+    "payment_id": "PAY-00163",
+    "what_happened": {
+      "mutation_type": "MISSING_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_BANK_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement exists but no corresponding bank credit was found."
+    }
+  },
+  {
+    "payment_id": "PAY-00046",
+    "what_happened": {
+      "mutation_type": "MISSING_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_BANK_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement exists but no corresponding bank credit was found."
+    }
+  },
+  {
+    "payment_id": "PAY-00002",
+    "what_happened": {
+      "mutation_type": "MISSING_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_BANK_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement exists but no corresponding bank credit was found."
+    }
+  },
+  {
+    "payment_id": "PAY-00038",
+    "what_happened": {
+      "mutation_type": "MISSING_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_BANK_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement exists but no corresponding bank credit was found."
+    }
+  },
+  {
+    "payment_id": "PAY-00073",
+    "what_happened": {
+      "mutation_type": "MISSING_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_BANK_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement exists but no corresponding bank credit was found."
+    }
+  },
+  {
+    "payment_id": "PAY-00045",
+    "what_happened": {
+      "mutation_type": "MISSING_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_BANK_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement exists but no corresponding bank credit was found."
+    }
+  },
+  {
+    "payment_id": "PAY-00176",
+    "what_happened": {
+      "mutation_type": "MISSING_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_BANK_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement exists but no corresponding bank credit was found."
+    }
+  },
+  {
+    "payment_id": "PAY-00194",
+    "what_happened": {
+      "mutation_type": "MISSING_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_BANK_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement exists but no corresponding bank credit was found."
+    }
+  },
+  {
+    "payment_id": "PAY-00111",
+    "what_happened": {
+      "mutation_type": "MISSING_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_BANK_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement exists but no corresponding bank credit was found."
+    }
+  },
+  {
+    "payment_id": "PAY-00162",
+    "what_happened": {
+      "mutation_type": "MISSING_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_BANK_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement exists but no corresponding bank credit was found."
+    }
+  },
+  {
+    "payment_id": "PAY-00062",
+    "what_happened": {
+      "mutation_type": "DUPLICATE_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_duplicated"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DUPLICATE_TRANSACTION",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Same bank credit appears twice; must not be silently double-counted or deleted."
+    }
+  },
+  {
+    "payment_id": "PAY-00084",
+    "what_happened": {
+      "mutation_type": "DUPLICATE_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_duplicated"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DUPLICATE_TRANSACTION",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Same bank credit appears twice; must not be silently double-counted or deleted."
+    }
+  },
+  {
+    "payment_id": "PAY-00096",
+    "what_happened": {
+      "mutation_type": "DUPLICATE_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_duplicated"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DUPLICATE_TRANSACTION",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Same bank credit appears twice; must not be silently double-counted or deleted."
+    }
+  },
+  {
+    "payment_id": "PAY-00185",
+    "what_happened": {
+      "mutation_type": "DUPLICATE_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_duplicated"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DUPLICATE_TRANSACTION",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Same bank credit appears twice; must not be silently double-counted or deleted."
+    }
+  },
+  {
+    "payment_id": "PAY-00025",
+    "what_happened": {
+      "mutation_type": "DUPLICATE_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_duplicated"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DUPLICATE_TRANSACTION",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Same bank credit appears twice; must not be silently double-counted or deleted."
+    }
+  },
+  {
+    "payment_id": "PAY-00127",
+    "what_happened": {
+      "mutation_type": "DUPLICATE_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_duplicated"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DUPLICATE_TRANSACTION",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Same bank credit appears twice; must not be silently double-counted or deleted."
+    }
+  },
+  {
+    "payment_id": "PAY-00150",
+    "what_happened": {
+      "mutation_type": "DUPLICATE_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_duplicated"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DUPLICATE_TRANSACTION",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Same bank credit appears twice; must not be silently double-counted or deleted."
+    }
+  },
+  {
+    "payment_id": "PAY-00158",
+    "what_happened": {
+      "mutation_type": "DUPLICATE_BANK_ENTRY",
+      "changed_fields": [
+        "bank_entry_duplicated"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DUPLICATE_TRANSACTION",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Same bank credit appears twice; must not be silently double-counted or deleted."
+    }
+  },
+  {
+    "payment_id": "PAY-00011",
+    "what_happened": {
+      "mutation_type": "UTR_FORMATTING_MISMATCH",
+      "changed_fields": [
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UTR_MISMATCH",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "UTR differs only in formatting; normalized values match."
+    }
+  },
+  {
+    "payment_id": "PAY-00114",
+    "what_happened": {
+      "mutation_type": "UTR_FORMATTING_MISMATCH",
+      "changed_fields": [
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UTR_MISMATCH",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "UTR differs only in formatting; normalized values match."
+    }
+  },
+  {
+    "payment_id": "PAY-00193",
+    "what_happened": {
+      "mutation_type": "UTR_FORMATTING_MISMATCH",
+      "changed_fields": [
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UTR_MISMATCH",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "UTR differs only in formatting; normalized values match."
+    }
+  },
+  {
+    "payment_id": "PAY-00033",
+    "what_happened": {
+      "mutation_type": "UTR_FORMATTING_MISMATCH",
+      "changed_fields": [
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UTR_MISMATCH",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "UTR differs only in formatting; normalized values match."
+    }
+  },
+  {
+    "payment_id": "PAY-00036",
+    "what_happened": {
+      "mutation_type": "UTR_FORMATTING_MISMATCH",
+      "changed_fields": [
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UTR_MISMATCH",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "UTR differs only in formatting; normalized values match."
+    }
+  },
+  {
+    "payment_id": "PAY-00144",
+    "what_happened": {
+      "mutation_type": "UTR_FORMATTING_MISMATCH",
+      "changed_fields": [
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UTR_MISMATCH",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "UTR differs only in formatting; normalized values match."
+    }
+  },
+  {
+    "payment_id": "PAY-00155",
+    "what_happened": {
+      "mutation_type": "UTR_FORMATTING_MISMATCH",
+      "changed_fields": [
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UTR_MISMATCH",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "UTR differs only in formatting; normalized values match."
+    }
+  },
+  {
+    "payment_id": "PAY-00196",
+    "what_happened": {
+      "mutation_type": "UTR_FORMATTING_MISMATCH",
+      "changed_fields": [
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UTR_MISMATCH",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "UTR differs only in formatting; normalized values match."
+    }
+  },
+  {
+    "payment_id": "PAY-00125",
+    "what_happened": {
+      "mutation_type": "UTR_FORMATTING_MISMATCH",
+      "changed_fields": [
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UTR_MISMATCH",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "UTR differs only in formatting; normalized values match."
+    }
+  },
+  {
+    "payment_id": "PAY-00086",
+    "what_happened": {
+      "mutation_type": "UTR_FORMATTING_MISMATCH",
+      "changed_fields": [
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UTR_MISMATCH",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "UTR differs only in formatting; normalized values match."
+    }
+  },
+  {
+    "payment_id": "PAY-00173",
+    "what_happened": {
+      "mutation_type": "UTR_FORMATTING_MISMATCH",
+      "changed_fields": [
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UTR_MISMATCH",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "UTR differs only in formatting; normalized values match."
+    }
+  },
+  {
+    "payment_id": "PAY-00188",
+    "what_happened": {
+      "mutation_type": "UTR_FORMATTING_MISMATCH",
+      "changed_fields": [
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UTR_MISMATCH",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "UTR differs only in formatting; normalized values match."
+    }
+  },
+  {
+    "payment_id": "PAY-00117",
+    "what_happened": {
+      "mutation_type": "MISSING_PAYMENT",
+      "changed_fields": [
+        "payment_deleted"
+      ],
+      "chain_affected": [
+        "payment"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_PAYMENT_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Order exists but no payment record was found on the gateway."
+    }
+  },
+  {
+    "payment_id": "PAY-00140",
+    "what_happened": {
+      "mutation_type": "MISSING_PAYMENT",
+      "changed_fields": [
+        "payment_deleted"
+      ],
+      "chain_affected": [
+        "payment"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_PAYMENT_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Order exists but no payment record was found on the gateway."
+    }
+  },
+  {
+    "payment_id": "PAY-00100",
+    "what_happened": {
+      "mutation_type": "MISSING_PAYMENT",
+      "changed_fields": [
+        "payment_deleted"
+      ],
+      "chain_affected": [
+        "payment"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_PAYMENT_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Order exists but no payment record was found on the gateway."
+    }
+  },
+  {
+    "payment_id": "PAY-00001",
+    "what_happened": {
+      "mutation_type": "MISSING_PAYMENT",
+      "changed_fields": [
+        "payment_deleted"
+      ],
+      "chain_affected": [
+        "payment"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_PAYMENT_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Order exists but no payment record was found on the gateway."
+    }
+  },
+  {
+    "payment_id": "PAY-00104",
+    "what_happened": {
+      "mutation_type": "MISSING_PAYMENT",
+      "changed_fields": [
+        "payment_deleted"
+      ],
+      "chain_affected": [
+        "payment"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MISSING_PAYMENT_RECORD",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Order exists but no payment record was found on the gateway."
+    }
+  },
+  {
+    "payment_id": "PAY-00065",
+    "what_happened": {
+      "mutation_type": "AMOUNT_MISMATCH",
+      "changed_fields": [
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UNEXPLAINED_AMOUNT_DIFFERENCE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Bank credit does not match settlement net amount after known deductions."
+    }
+  },
+  {
+    "payment_id": "PAY-00110",
+    "what_happened": {
+      "mutation_type": "AMOUNT_MISMATCH",
+      "changed_fields": [
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UNEXPLAINED_AMOUNT_DIFFERENCE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Bank credit does not match settlement net amount after known deductions."
+    }
+  },
+  {
+    "payment_id": "PAY-00057",
+    "what_happened": {
+      "mutation_type": "AMOUNT_MISMATCH",
+      "changed_fields": [
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UNEXPLAINED_AMOUNT_DIFFERENCE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Bank credit does not match settlement net amount after known deductions."
+    }
+  },
+  {
+    "payment_id": "PAY-00067",
+    "what_happened": {
+      "mutation_type": "AMOUNT_MISMATCH",
+      "changed_fields": [
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UNEXPLAINED_AMOUNT_DIFFERENCE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Bank credit does not match settlement net amount after known deductions."
+    }
+  },
+  {
+    "payment_id": "PAY-00049",
+    "what_happened": {
+      "mutation_type": "AMOUNT_MISMATCH",
+      "changed_fields": [
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UNEXPLAINED_AMOUNT_DIFFERENCE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Bank credit does not match settlement net amount after known deductions."
+    }
+  },
+  {
+    "payment_id": "PAY-00023",
+    "what_happened": {
+      "mutation_type": "AMOUNT_MISMATCH",
+      "changed_fields": [
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UNEXPLAINED_AMOUNT_DIFFERENCE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Bank credit does not match settlement net amount after known deductions."
+    }
+  },
+  {
+    "payment_id": "PAY-00177",
+    "what_happened": {
+      "mutation_type": "AMOUNT_MISMATCH",
+      "changed_fields": [
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UNEXPLAINED_AMOUNT_DIFFERENCE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Bank credit does not match settlement net amount after known deductions."
+    }
+  },
+  {
+    "payment_id": "PAY-00198",
+    "what_happened": {
+      "mutation_type": "AMOUNT_MISMATCH",
+      "changed_fields": [
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "UNEXPLAINED_AMOUNT_DIFFERENCE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Bank credit does not match settlement net amount after known deductions."
+    }
+  },
+  {
+    "payment_id": "PAY-00044",
+    "what_happened": {
+      "mutation_type": "FEE_MISMATCH",
+      "changed_fields": [
+        "fee",
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "FEE_CALCULATION_ERROR",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Recorded fee does not match the standard 2% fee structure."
+    }
+  },
+  {
+    "payment_id": "PAY-00092",
+    "what_happened": {
+      "mutation_type": "FEE_MISMATCH",
+      "changed_fields": [
+        "fee",
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "FEE_CALCULATION_ERROR",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Recorded fee does not match the standard 2% fee structure."
+    }
+  },
+  {
+    "payment_id": "PAY-00027",
+    "what_happened": {
+      "mutation_type": "FEE_MISMATCH",
+      "changed_fields": [
+        "fee",
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "FEE_CALCULATION_ERROR",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Recorded fee does not match the standard 2% fee structure."
+    }
+  },
+  {
+    "payment_id": "PAY-00021",
+    "what_happened": {
+      "mutation_type": "FEE_MISMATCH",
+      "changed_fields": [
+        "fee",
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "FEE_CALCULATION_ERROR",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Recorded fee does not match the standard 2% fee structure."
+    }
+  },
+  {
+    "payment_id": "PAY-00153",
+    "what_happened": {
+      "mutation_type": "FEE_MISMATCH",
+      "changed_fields": [
+        "fee",
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "FEE_CALCULATION_ERROR",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Recorded fee does not match the standard 2% fee structure."
+    }
+  },
+  {
+    "payment_id": "PAY-00035",
+    "what_happened": {
+      "mutation_type": "FEE_MISMATCH",
+      "changed_fields": [
+        "fee",
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "FEE_CALCULATION_ERROR",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Recorded fee does not match the standard 2% fee structure."
+    }
+  },
+  {
+    "payment_id": "PAY-00151",
+    "what_happened": {
+      "mutation_type": "TAX_MISMATCH",
+      "changed_fields": [
+        "tax",
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "TAX_CALCULATION_ERROR",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Recorded tax does not match the expected 18% GST on fee."
+    }
+  },
+  {
+    "payment_id": "PAY-00017",
+    "what_happened": {
+      "mutation_type": "TAX_MISMATCH",
+      "changed_fields": [
+        "tax",
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "TAX_CALCULATION_ERROR",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Recorded tax does not match the expected 18% GST on fee."
+    }
+  },
+  {
+    "payment_id": "PAY-00009",
+    "what_happened": {
+      "mutation_type": "TAX_MISMATCH",
+      "changed_fields": [
+        "tax",
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "TAX_CALCULATION_ERROR",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Recorded tax does not match the expected 18% GST on fee."
+    }
+  },
+  {
+    "payment_id": "PAY-00048",
+    "what_happened": {
+      "mutation_type": "TAX_MISMATCH",
+      "changed_fields": [
+        "tax",
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "TAX_CALCULATION_ERROR",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Recorded tax does not match the expected 18% GST on fee."
+    }
+  },
+  {
+    "payment_id": "PAY-00137",
+    "what_happened": {
+      "mutation_type": "TAX_MISMATCH",
+      "changed_fields": [
+        "tax",
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "TAX_CALCULATION_ERROR",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Recorded tax does not match the expected 18% GST on fee."
+    }
+  },
+  {
+    "payment_id": "PAY-00077",
+    "what_happened": {
+      "mutation_type": "DELAYED_SETTLEMENT",
+      "changed_fields": [
+        "settlement_time"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DELAYED_SETTLEMENT",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "Settlement arrived later than usual but is not missing or incorrect."
+    }
+  },
+  {
+    "payment_id": "PAY-00123",
+    "what_happened": {
+      "mutation_type": "DELAYED_SETTLEMENT",
+      "changed_fields": [
+        "settlement_time"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DELAYED_SETTLEMENT",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "Settlement arrived later than usual but is not missing or incorrect."
+    }
+  },
+  {
+    "payment_id": "PAY-00143",
+    "what_happened": {
+      "mutation_type": "DELAYED_SETTLEMENT",
+      "changed_fields": [
+        "settlement_time"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DELAYED_SETTLEMENT",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "Settlement arrived later than usual but is not missing or incorrect."
+    }
+  },
+  {
+    "payment_id": "PAY-00030",
+    "what_happened": {
+      "mutation_type": "DELAYED_SETTLEMENT",
+      "changed_fields": [
+        "settlement_time"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DELAYED_SETTLEMENT",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "Settlement arrived later than usual but is not missing or incorrect."
+    }
+  },
+  {
+    "payment_id": "PAY-00131",
+    "what_happened": {
+      "mutation_type": "DELAYED_SETTLEMENT",
+      "changed_fields": [
+        "settlement_time"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DELAYED_SETTLEMENT",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "Settlement arrived later than usual but is not missing or incorrect."
+    }
+  },
+  {
+    "payment_id": "PAY-00015",
+    "what_happened": {
+      "mutation_type": "DELAYED_SETTLEMENT",
+      "changed_fields": [
+        "settlement_time"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DELAYED_SETTLEMENT",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "Settlement arrived later than usual but is not missing or incorrect."
+    }
+  },
+  {
+    "payment_id": "PAY-00034",
+    "what_happened": {
+      "mutation_type": "DELAYED_SETTLEMENT",
+      "changed_fields": [
+        "settlement_time"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DELAYED_SETTLEMENT",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "Settlement arrived later than usual but is not missing or incorrect."
+    }
+  },
+  {
+    "payment_id": "PAY-00050",
+    "what_happened": {
+      "mutation_type": "DELAYED_SETTLEMENT",
+      "changed_fields": [
+        "settlement_time"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DELAYED_SETTLEMENT",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "Settlement arrived later than usual but is not missing or incorrect."
+    }
+  },
+  {
+    "payment_id": "PAY-00129",
+    "what_happened": {
+      "mutation_type": "DELAYED_SETTLEMENT",
+      "changed_fields": [
+        "settlement_time"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DELAYED_SETTLEMENT",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "Settlement arrived later than usual but is not missing or incorrect."
+    }
+  },
+  {
+    "payment_id": "PAY-00032",
+    "what_happened": {
+      "mutation_type": "DELAYED_SETTLEMENT",
+      "changed_fields": [
+        "settlement_time"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DELAYED_SETTLEMENT",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "Settlement arrived later than usual but is not missing or incorrect."
+    }
+  },
+  {
+    "payment_id": "PAY-00156",
+    "what_happened": {
+      "mutation_type": "DELAYED_SETTLEMENT",
+      "changed_fields": [
+        "settlement_time"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DELAYED_SETTLEMENT",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "Settlement arrived later than usual but is not missing or incorrect."
+    }
+  },
+  {
+    "payment_id": "PAY-00135",
+    "what_happened": {
+      "mutation_type": "DELAYED_SETTLEMENT",
+      "changed_fields": [
+        "settlement_time"
+      ],
+      "chain_affected": [
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "DELAYED_SETTLEMENT",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "Settlement arrived later than usual but is not missing or incorrect."
+    }
+  },
+  {
+    "payment_id": "PAY-00079",
+    "what_happened": {
+      "mutation_type": "REFUND_NOT_REFLECTED",
+      "changed_fields": [
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement",
+        "refund"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "REFUND_NOT_DEDUCTED",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement amount does not reflect the recorded \u20b926.93 refund."
+    }
+  },
+  {
+    "payment_id": "PAY-00085",
+    "what_happened": {
+      "mutation_type": "REFUND_NOT_REFLECTED",
+      "changed_fields": [
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement",
+        "refund"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "REFUND_NOT_DEDUCTED",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement amount does not reflect the recorded \u20b9415.52 refund."
+    }
+  },
+  {
+    "payment_id": "PAY-00126",
+    "what_happened": {
+      "mutation_type": "REFUND_AFTER_SETTLEMENT",
+      "changed_fields": [
+        "refund_time"
+      ],
+      "chain_affected": [
+        "refund",
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "REFUND_TIMING_CONFLICT",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Merchant already received settlement before the refund occurred; this creates a subsequent cash liability, not a settlement calculation error."
+    }
+  },
+  {
+    "payment_id": "PAY-00016",
+    "what_happened": {
+      "mutation_type": "REFUND_AFTER_SETTLEMENT",
+      "changed_fields": [
+        "refund_time"
+      ],
+      "chain_affected": [
+        "refund",
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "REFUND_TIMING_CONFLICT",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Merchant already received settlement before the refund occurred; this creates a subsequent cash liability, not a settlement calculation error."
+    }
+  },
+  {
+    "payment_id": "PAY-00166",
+    "what_happened": {
+      "mutation_type": "FULL_REFUND_NEGATIVE_NET",
+      "changed_fields": [],
+      "chain_affected": [
+        "settlement",
+        "refund"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "FULL_REFUND_FEE_LIABILITY",
+      "expected_outcome": "RESOLVE",
+      "should_auto_resolve": true,
+      "reasoning_note": "Full refund correctly results in negative net_amount; fee is not refunded to merchant."
+    }
+  },
+  {
+    "payment_id": "PAY-00159",
+    "what_happened": {
+      "mutation_type": "MULTIPLE_REFUNDS",
+      "changed_fields": [
+        "refund_added"
+      ],
+      "chain_affected": [
+        "refund",
+        "settlement"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "MULTIPLE_REFUNDS_UNACCOUNTED",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "A second refund was issued against a payment that already had one; settlement does not reflect the combined total."
+    }
+  },
+  {
+    "payment_id": "PAY-00069",
+    "what_happened": {
+      "mutation_type": "OVER_REFUND",
+      "changed_fields": [
+        "refund_amount"
+      ],
+      "chain_affected": [
+        "refund"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "REFUND_EXCEEDS_PAYMENT",
+      "expected_outcome": "REJECT_ACTION",
+      "should_auto_resolve": false,
+      "reasoning_note": "Refund amount exceeds the original payment amount \u2014 a hard policy violation."
+    }
+  },
+  {
+    "payment_id": "PAY-00094",
+    "what_happened": {
+      "mutation_type": "REFUND_FEE_DISCREPANCY",
+      "changed_fields": [
+        "fee",
+        "net_amount"
+      ],
+      "chain_affected": [
+        "settlement",
+        "refund"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "REFUND_FEE_RECALCULATION_ERROR",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Fee was not correctly recalculated after refund was processed."
+    }
+  },
+  {
+    "payment_id": "PAY-00161",
+    "what_happened": {
+      "mutation_type": "COMPOUND_A_REFUND_FEE_UTR",
+      "changed_fields": [
+        "net_amount",
+        "fee",
+        "UTR"
+      ],
+      "chain_affected": [
+        "settlement",
+        "refund",
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Partial refund, incorrect fee recalculation, and UTR formatting difference combined on one chain."
+    }
+  },
+  {
+    "payment_id": "PAY-00183",
+    "what_happened": {
+      "mutation_type": "COMPOUND_A_REFUND_FEE_UTR",
+      "changed_fields": [
+        "net_amount",
+        "fee",
+        "UTR"
+      ],
+      "chain_affected": [
+        "settlement",
+        "refund",
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Partial refund, incorrect fee recalculation, and UTR formatting difference combined on one chain."
+    }
+  },
+  {
+    "payment_id": "PAY-00041",
+    "what_happened": {
+      "mutation_type": "COMPOUND_A_REFUND_FEE_UTR",
+      "changed_fields": [
+        "net_amount",
+        "fee",
+        "UTR"
+      ],
+      "chain_affected": [
+        "settlement",
+        "refund",
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Partial refund, incorrect fee recalculation, and UTR formatting difference combined on one chain."
+    }
+  },
+  {
+    "payment_id": "PAY-00053",
+    "what_happened": {
+      "mutation_type": "COMPOUND_A_REFUND_FEE_UTR",
+      "changed_fields": [
+        "net_amount",
+        "fee",
+        "UTR"
+      ],
+      "chain_affected": [
+        "settlement",
+        "refund",
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Partial refund, incorrect fee recalculation, and UTR formatting difference combined on one chain."
+    }
+  },
+  {
+    "payment_id": "PAY-00186",
+    "what_happened": {
+      "mutation_type": "COMPOUND_B_DELAYED_MISSING_BANK",
+      "changed_fields": [
+        "settlement_time",
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "settlement",
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement is delayed AND no bank entry has landed yet \u2014 ambiguous whether it's just late or genuinely missing."
+    }
+  },
+  {
+    "payment_id": "PAY-00199",
+    "what_happened": {
+      "mutation_type": "COMPOUND_B_DELAYED_MISSING_BANK",
+      "changed_fields": [
+        "settlement_time",
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "settlement",
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement is delayed AND no bank entry has landed yet \u2014 ambiguous whether it's just late or genuinely missing."
+    }
+  },
+  {
+    "payment_id": "PAY-00160",
+    "what_happened": {
+      "mutation_type": "COMPOUND_B_DELAYED_MISSING_BANK",
+      "changed_fields": [
+        "settlement_time",
+        "bank_entry_deleted"
+      ],
+      "chain_affected": [
+        "settlement",
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Settlement is delayed AND no bank entry has landed yet \u2014 ambiguous whether it's just late or genuinely missing."
+    }
+  },
+  {
+    "payment_id": "PAY-00088",
+    "what_happened": {
+      "mutation_type": "COMPOUND_C_FULLREFUND_NEGATIVE_UTR",
+      "changed_fields": [
+        "net_amount",
+        "UTR",
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "settlement",
+        "refund",
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Full refund correctly produces negative net_amount, compounded by a UTR formatting difference requiring normalization."
+    }
+  },
+  {
+    "payment_id": "PAY-00152",
+    "what_happened": {
+      "mutation_type": "COMPOUND_C_FULLREFUND_NEGATIVE_UTR",
+      "changed_fields": [
+        "net_amount",
+        "UTR",
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "settlement",
+        "refund",
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Full refund correctly produces negative net_amount, compounded by a UTR formatting difference requiring normalization."
+    }
+  },
+  {
+    "payment_id": "PAY-00091",
+    "what_happened": {
+      "mutation_type": "COMPOUND_C_FULLREFUND_NEGATIVE_UTR",
+      "changed_fields": [
+        "net_amount",
+        "UTR",
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "settlement",
+        "refund",
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Full refund correctly produces negative net_amount, compounded by a UTR formatting difference requiring normalization."
+    }
+  },
+  {
+    "payment_id": "PAY-00099",
+    "what_happened": {
+      "mutation_type": "COMPOUND_D_AMOUNT_DELAYED_REFUND",
+      "changed_fields": [
+        "net_amount",
+        "settlement_time",
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "settlement",
+        "refund",
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Refund, delay, and an unexplained bank amount difference together make this a genuinely ambiguous case requiring full investigation."
+    }
+  },
+  {
+    "payment_id": "PAY-00070",
+    "what_happened": {
+      "mutation_type": "COMPOUND_D_AMOUNT_DELAYED_REFUND",
+      "changed_fields": [
+        "net_amount",
+        "settlement_time",
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "settlement",
+        "refund",
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Refund, delay, and an unexplained bank amount difference together make this a genuinely ambiguous case requiring full investigation."
+    }
+  },
+  {
+    "payment_id": "PAY-00008",
+    "what_happened": {
+      "mutation_type": "COMPOUND_D_AMOUNT_DELAYED_REFUND",
+      "changed_fields": [
+        "net_amount",
+        "settlement_time",
+        "credit_amount"
+      ],
+      "chain_affected": [
+        "settlement",
+        "refund",
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "ESCALATE",
+      "should_auto_resolve": false,
+      "reasoning_note": "Refund, delay, and an unexplained bank amount difference together make this a genuinely ambiguous case requiring full investigation."
+    }
+  },
+  {
+    "payment_id": "PAY-00168",
+    "what_happened": {
+      "mutation_type": "COMPOUND_E_DUPLICATE_UTR",
+      "changed_fields": [
+        "bank_entry_duplicated",
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Duplicate bank credit combined with inconsistent UTR formatting between the two entries."
+    }
+  },
+  {
+    "payment_id": "PAY-00004",
+    "what_happened": {
+      "mutation_type": "COMPOUND_E_DUPLICATE_UTR",
+      "changed_fields": [
+        "bank_entry_duplicated",
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Duplicate bank credit combined with inconsistent UTR formatting between the two entries."
+    }
+  },
+  {
+    "payment_id": "PAY-00187",
+    "what_happened": {
+      "mutation_type": "COMPOUND_E_DUPLICATE_UTR",
+      "changed_fields": [
+        "bank_entry_duplicated",
+        "UTR"
+      ],
+      "chain_affected": [
+        "bank"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "COMPOUND_CASE",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Duplicate bank credit combined with inconsistent UTR formatting between the two entries."
+    }
+  },
+  {
+    "payment_id": "PAY-00066",
+    "what_happened": {
+      "mutation_type": "BORDERLINE_CASE",
+      "changed_fields": [
+        "various_small"
+      ],
+      "chain_affected": [
+        "settlement",
+        "bank",
+        "refund"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "AMBIGUOUS_MINOR_DISCREPANCY",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Small unexplained amount gap combined with UTR formatting difference"
+    }
+  },
+  {
+    "payment_id": "PAY-00136",
+    "what_happened": {
+      "mutation_type": "BORDERLINE_CASE",
+      "changed_fields": [
+        "various_small"
+      ],
+      "chain_affected": [
+        "settlement",
+        "bank",
+        "refund"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "AMBIGUOUS_MINOR_DISCREPANCY",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Borderline settlement delay with a small amount gap"
+    }
+  },
+  {
+    "payment_id": "PAY-00190",
+    "what_happened": {
+      "mutation_type": "BORDERLINE_CASE",
+      "changed_fields": [
+        "various_small"
+      ],
+      "chain_affected": [
+        "settlement",
+        "bank",
+        "refund"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "AMBIGUOUS_MINOR_DISCREPANCY",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Very small partial refund not yet reflected in settlement"
+    }
+  },
+  {
+    "payment_id": "PAY-00090",
+    "what_happened": {
+      "mutation_type": "BORDERLINE_CASE",
+      "changed_fields": [
+        "various_small"
+      ],
+      "chain_affected": [
+        "settlement",
+        "bank",
+        "refund"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "AMBIGUOUS_MINOR_DISCREPANCY",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Unusual UTR formatting variant (dot-separated) not previously seen"
+    }
+  },
+  {
+    "payment_id": "PAY-00146",
+    "what_happened": {
+      "mutation_type": "BORDERLINE_CASE",
+      "changed_fields": [
+        "various_small"
+      ],
+      "chain_affected": [
+        "settlement",
+        "bank",
+        "refund"
+      ]
+    },
+    "expected_truth": {
+      "expected_exception": "AMBIGUOUS_MINOR_DISCREPANCY",
+      "expected_outcome": "REVIEW",
+      "should_auto_resolve": false,
+      "reasoning_note": "Fee slightly outside tolerance by a small, ambiguous margin"
+    }
+  }
+]

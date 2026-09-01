@@ -1,0 +1,251 @@
+[
+  {
+    "case_id": "CASE-0001",
+    "payment_id": "PAY-00046",
+    "amount_at_risk": 172425.68,
+    "stage2_findings": {
+      "bank_match": {
+        "status": "EXCEPTION",
+        "method": "NONE",
+        "bank_txn_id": null,
+        "candidate_bank_txn_ids": [],
+        "exception_type": "MISSING_BANK_ENTRY",
+        "evidence": {
+          "utr_match": false,
+          "amount_difference": null,
+          "date_difference_days": null
+        }
+      },
+      "lifecycle_check": {
+        "status": "PASS",
+        "exception_type": null,
+        "expected_net": 43896.61,
+        "actual_net": 43896.6
+      }
+    },
+    "agent_investigation": {
+      "root_cause": "MISSING_BANK_ENTRY",
+      "explanation": "Settlement SET-00046 for payment PAY-00046 was processed on 2026-08-10 09:43:37 with UTR UTR213669678 and a net amount of \u20b943,896.60. The settlement net amount reconciles with the payment, refund, fee, and tax arithmetic: Gross (\u20b9172,425.68) - Refund REF-00010 (\u20b9124,459.83) - Fee (\u20b93,448.51) - Tax (\u20b9620.73) = \u20b943,896.61. However, no corresponding entry exists in the bank statement (bank_entries is empty).",
+      "evidence": {
+        "records_examined": [
+          "ORD-00103",
+          "PAY-00046",
+          "REF-00010",
+          "SET-00046"
+        ],
+        "calculation": "Expected Net = 172425.68 (Gross) - 124459.83 (Refund) - 3448.51 (Fee) - 620.73 (Tax) = 43896.61 vs Settlement Net = 43896.60 (Diff = 0.01 due to rounding)",
+        "key_findings": [
+          "Settlement SET-00046 correctly reflects gross amount, fees, taxes, and refund REF-00010.",
+          "Bank statement entries list is empty, meaning settlement UTR UTR213669678 has no matching bank credit record."
+        ]
+      },
+      "confidence": 0.95
+    },
+    "policy_decision": {
+      "final_action": "ESCALATE",
+      "policy_reason": "Escalate to bank operations to trace payout for UTR213669678 and obtain the missing bank feed record."
+    },
+    "timestamp": "2026-08-31T12:34:14.909875"
+  },
+  {
+    "case_id": "CASE-0002",
+    "payment_id": "PAY-00065",
+    "amount_at_risk": 167174.78,
+    "stage2_findings": {
+      "bank_match": {
+        "status": "EXCEPTION",
+        "method": "NONE",
+        "bank_txn_id": null,
+        "candidate_bank_txn_ids": [
+          "BANK-00065"
+        ],
+        "exception_type": "AMOUNT_MISMATCH",
+        "evidence": {
+          "utr_match": true,
+          "amount_difference": null,
+          "date_difference_days": null
+        }
+      },
+      "lifecycle_check": {
+        "status": "PASS",
+        "exception_type": null,
+        "expected_net": 163229.45,
+        "actual_net": 163229.46
+      }
+    },
+    "agent_investigation": {
+      "root_cause": "AMOUNT_MISMATCH",
+      "explanation": "The settlement SET-00065 and bank entry BANK-00065 share the same UTR (UTR993027458), but their net amounts do not match. Expected settlement net amount is 167174.78 - 3343.50 - 601.83 = 163229.45 (recorded net: 163229.46). However, bank record BANK-00065 shows a credited amount of 163161.39, resulting in an unaccounted discrepancy of 68.07.",
+      "evidence": {
+        "records_examined": [
+          "PAY-00065",
+          "SET-00065",
+          "BANK-00065"
+        ],
+        "calculation": "Expected settlement net = Gross (167174.78) - Fee (3343.50) - Tax (601.83) = 163229.45; Settlement Net = 163229.46; Bank Credit = 163161.39; Discrepancy = 163229.46 - 163161.39 = 68.07",
+        "key_findings": [
+          "UTR matches perfectly across Settlement SET-00065 and Bank entry BANK-00065 (UTR993027458).",
+          "Bank credit amount of 163161.39 is lower than the settlement net amount of 163229.46 by 68.07.",
+          "No refunds exist for this payment to account for the variance."
+        ]
+      },
+      "confidence": 0.95
+    },
+    "policy_decision": {
+      "final_action": "ESCALATE",
+      "policy_reason": "Human review with the payment gateway / bank is required to resolve the financial variance of 68.07 between expected payout and bank credit."
+    },
+    "timestamp": "2026-08-31T12:34:31.062835"
+  },
+  {
+    "case_id": "CASE-0003",
+    "payment_id": "PAY-00057",
+    "amount_at_risk": 100204.75,
+    "stage2_findings": {
+      "bank_match": {
+        "status": "EXCEPTION",
+        "method": "NONE",
+        "bank_txn_id": null,
+        "candidate_bank_txn_ids": [
+          "BANK-00057"
+        ],
+        "exception_type": "AMOUNT_MISMATCH",
+        "evidence": {
+          "utr_match": true,
+          "amount_difference": null,
+          "date_difference_days": null
+        }
+      },
+      "lifecycle_check": {
+        "status": "PASS",
+        "exception_type": null,
+        "expected_net": 42106.07,
+        "actual_net": 42106.08
+      }
+    },
+    "agent_investigation": {
+      "root_cause": "AMOUNT_MISMATCH",
+      "explanation": "The bank entry (BANK-00057) matched the settlement (SET-00057) by UTR (UTR910080036), but there is a discrepancy in the transferred amount. Settlement SET-00057 net amount is \u20b942,106.08 (calculated as gross \u20b9100,204.75 - refund \u20b955,733.84 - fee \u20b92,004.10 - tax \u20b9360.74 = \u20b942,106.07), whereas bank entry BANK-00057 recorded a credit of \u20b942,710.98. This results in an unexplained variance of \u20b9604.90 between the settlement record and bank deposit.",
+      "evidence": {
+        "records_examined": [
+          "ORD-00149",
+          "PAY-00057",
+          "REF-00017",
+          "SET-00057",
+          "BANK-00057"
+        ],
+        "calculation": "Expected Settlement Net = \u20b9100,204.75 (Gross) - \u20b955,733.84 (Refund) - \u20b92,004.10 (Fee) - \u20b9360.74 (Tax) = \u20b942,106.07; Settlement Record Net = \u20b942,106.08; Observed Bank Credit = \u20b942,710.98; Variance = \u20b942,710.98 - \u20b942,106.08 = \u20b9604.90",
+        "key_findings": [
+          "UTR matches perfectly between settlement SET-00057 and bank entry BANK-00057 (UTR910080036).",
+          "Settlement net amount (\u20b942,106.08) reflects deduction of refund REF-00017 (\u20b955,733.84), gateway fee (\u20b92,004.10), and tax (\u20b9360.74).",
+          "Bank entry BANK-00057 credited \u20b942,710.98 instead of the settled net amount of \u20b942,106.08, creating a \u20b9604.90 amount mismatch."
+        ]
+      },
+      "confidence": 0.88
+    },
+    "policy_decision": {
+      "final_action": "ESCALATE",
+      "policy_reason": "Escalation is required to investigate the \u20b9604.90 difference between the settlement net amount and the actual bank payout."
+    },
+    "timestamp": "2026-08-31T12:34:57.412052"
+  },
+  {
+    "case_id": "CASE-0004",
+    "payment_id": "PAY-00161",
+    "amount_at_risk": 59075.71,
+    "stage2_findings": {
+      "bank_match": {
+        "status": "EXCEPTION",
+        "method": "NONE",
+        "bank_txn_id": null,
+        "candidate_bank_txn_ids": [
+          "BANK-00161"
+        ],
+        "exception_type": "AMOUNT_MISMATCH",
+        "evidence": {
+          "utr_match": true,
+          "amount_difference": null,
+          "date_difference_days": null
+        }
+      },
+      "lifecycle_check": {
+        "status": "FAIL",
+        "exception_type": "FEE_MISMATCH",
+        "expected_net": 30132.14,
+        "actual_net": 29369.88
+      }
+    },
+    "agent_investigation": {
+      "root_cause": "AMOUNT_MISMATCH",
+      "explanation": "The settlement record SET-00161 correctly accounts for the processed refund of \u20b927,549.39, resulting in a net settlement amount of \u20b929,369.88 (Gross \u20b959,075.71 - Refund \u20b927,549.39 - Fee \u20b91,943.76 - Tax \u20b9212.67 = \u20b929,369.89). However, bank record BANK-00161 under the matching UTR UTR578798403 shows a credited amount of \u20b957,681.52, creating a discrepancy of \u20b928,311.64 between the settlement net amount and the actual bank credit.",
+      "evidence": {
+        "records_examined": [
+          "ORD-00138",
+          "PAY-00161",
+          "REF-COMPOUND-PAY-00161",
+          "SET-00161",
+          "BANK-00161"
+        ],
+        "calculation": "Expected Settlement Net = \u20b959,075.71 (Gross) - \u20b927,549.39 (Refund) - \u20b91,943.76 (Fee) - \u20b9212.67 (Tax) = \u20b929,369.89. Recorded Settlement Net = \u20b929,369.88. Bank Credit Amount = \u20b957,681.52. Discrepancy = \u20b957,681.52 - \u20b929,369.88 = \u20b928,311.64.",
+        "key_findings": [
+          "Settlement SET-00161 correctly incorporates the refund of \u20b927,549.39 processed on 2026-08-27 prior to settlement on 2026-08-29.",
+          "Bank statement entry BANK-00161 matches UTR578798403 but reflects a significantly higher credit amount of \u20b957,681.52.",
+          "The bank credit amount of \u20b957,681.52 appears to represent payment gross minus fees/taxes without deducting the processed refund."
+        ]
+      },
+      "confidence": 0.95
+    },
+    "policy_decision": {
+      "final_action": "ESCALATE",
+      "policy_reason": "A material financial mismatch of \u20b928,311.64 exists between the settlement net amount and bank payout credit, requiring manual review with gateway payout reports."
+    },
+    "timestamp": "2026-08-31T12:35:18.730958"
+  },
+  {
+    "case_id": "CASE-0005",
+    "payment_id": "PAY-00045",
+    "amount_at_risk": 45964.92,
+    "stage2_findings": {
+      "bank_match": {
+        "status": "EXCEPTION",
+        "method": "NONE",
+        "bank_txn_id": null,
+        "candidate_bank_txn_ids": [],
+        "exception_type": "MISSING_BANK_ENTRY",
+        "evidence": {
+          "utr_match": false,
+          "amount_difference": null,
+          "date_difference_days": null
+        }
+      },
+      "lifecycle_check": {
+        "status": "PASS",
+        "exception_type": null,
+        "expected_net": 44880.15,
+        "actual_net": 44880.15
+      }
+    },
+    "agent_investigation": {
+      "root_cause": "MISSING_BANK_ENTRY",
+      "explanation": "Payment PAY-00045 was processed for order ORD-00096 (\u20b945,964.92) and settled under SET-00045 with gross amount \u20b945,964.92, fee \u20b9919.30, and tax \u20b9165.47. The expected net settlement amount is \u20b945,964.92 - \u20b9919.30 - \u20b9165.47 = \u20b944,880.15, which matches SET-00045 net_amount. However, no bank entries exist in the evidence matching UTR UTR840463141 or the expected credit amount of \u20b944,880.15.",
+      "evidence": {
+        "records_examined": [
+          "ORD-00096",
+          "PAY-00045",
+          "SET-00045"
+        ],
+        "calculation": "Expected Net Settlement = 45964.92 (Gross) - 919.30 (Fee) - 165.47 (Tax) = 44880.15",
+        "key_findings": [
+          "Settlement SET-00045 lifecycle calculation balances perfectly (net_amount \u20b944,880.15).",
+          "No bank entry record exists for UTR UTR840463141 or credit of \u20b944,880.15."
+        ]
+      },
+      "confidence": 0.95
+    },
+    "policy_decision": {
+      "final_action": "ESCALATE",
+      "policy_reason": "Settlement SET-00045 (\u20b944,880.15) has no matching bank entry record, requiring manual bank statement ingestion verification or bank follow-up."
+    },
+    "timestamp": "2026-08-31T12:36:04.346637"
+  }
+]

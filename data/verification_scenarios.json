@@ -1,0 +1,86 @@
+[
+  {
+    "label": "Low Confidence Auto-Resolve Correction",
+    "description": "A case initially marked safe to auto-resolve, but the confidence (0.72) doesn't actually clear the 0.90 threshold required for automation.",
+    "payment_id": "SIM-PAY-001",
+    "root_cause": "UTR_MISMATCH",
+    "confidence": 0.72,
+    "amount_at_risk": 1500.0,
+    "original_action": "AUTO_RESOLVE",
+    "execution": {
+      "action_taken": "ESCALATED",
+      "store": "data/escalation_queue.json",
+      "record": {
+        "payment_id": "SIM-PAY-001",
+        "escalated_at": "2026-09-01T13:55:41.178840",
+        "root_cause": "UTR_MISMATCH",
+        "reason": "Auto-corrected by verification loop: original action 'AUTO_RESOLVE' failed re-verification (WARNING: re-check disagrees \u2014 got ESCALATE.)",
+        "amount_at_risk": 1500.0,
+        "priority": "LOW"
+      }
+    },
+    "verification": {
+      "verified": true,
+      "verification_method": "EVIDENCE_COMPLETENESS_CHECK",
+      "notes": "All required evidence fields present.",
+      "corrected": true,
+      "original_action": "AUTO_RESOLVE"
+    }
+  },
+  {
+    "label": "Materiality-Driven Correction",
+    "description": "High agent confidence (0.95), but the amount at risk (\u20b985,000) exceeds the materiality threshold \u2014 the re-check catches what the initial pass missed.",
+    "payment_id": "SIM-PAY-002",
+    "root_cause": "FEE_MISMATCH",
+    "confidence": 0.95,
+    "amount_at_risk": 85000.0,
+    "original_action": "AUTO_RESOLVE",
+    "execution": {
+      "action_taken": "ESCALATED",
+      "store": "data/escalation_queue.json",
+      "record": {
+        "payment_id": "SIM-PAY-002",
+        "escalated_at": "2026-09-01T13:55:41.181839",
+        "root_cause": "FEE_MISMATCH",
+        "reason": "Auto-corrected by verification loop: original action 'AUTO_RESOLVE' failed re-verification (WARNING: re-check disagrees \u2014 got ESCALATE.)",
+        "amount_at_risk": 85000.0,
+        "priority": "HIGH"
+      }
+    },
+    "verification": {
+      "verified": true,
+      "verification_method": "EVIDENCE_COMPLETENESS_CHECK",
+      "notes": "All required evidence fields present.",
+      "corrected": true,
+      "original_action": "AUTO_RESOLVE"
+    }
+  },
+  {
+    "label": "Confidence Just Below Threshold",
+    "description": "Confidence (0.89) sits just one point under the 0.90 auto-resolve threshold \u2014 small enough to be missed casually, caught by the strict re-check.",
+    "payment_id": "SIM-PAY-003",
+    "root_cause": "TAX_MISMATCH",
+    "confidence": 0.89,
+    "amount_at_risk": 2200.0,
+    "original_action": "AUTO_RESOLVE",
+    "execution": {
+      "action_taken": "ESCALATED",
+      "store": "data/escalation_queue.json",
+      "record": {
+        "payment_id": "SIM-PAY-003",
+        "escalated_at": "2026-09-01T13:55:41.183337",
+        "root_cause": "TAX_MISMATCH",
+        "reason": "Auto-corrected by verification loop: original action 'AUTO_RESOLVE' failed re-verification (WARNING: re-check disagrees \u2014 got REVIEW.)",
+        "amount_at_risk": 2200.0,
+        "priority": "LOW"
+      }
+    },
+    "verification": {
+      "verified": true,
+      "verification_method": "EVIDENCE_COMPLETENESS_CHECK",
+      "notes": "All required evidence fields present.",
+      "corrected": true,
+      "original_action": "AUTO_RESOLVE"
+    }
+  }
+]

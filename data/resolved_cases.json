@@ -1,0 +1,92 @@
+[
+  {
+    "payment_id": "PAY-00004",
+    "resolved_at": "2026-08-31T15:56:12.151314",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00150",
+    "resolved_at": "2026-08-31T15:56:29.829859",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00127",
+    "resolved_at": "2026-08-31T15:56:39.436753",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00187",
+    "resolved_at": "2026-08-31T15:57:38.746488",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00104",
+    "resolved_at": "2026-08-31T15:58:08.882811",
+    "root_cause": "GENUINE_DISCREPANCY",
+    "resolution_reason": "High confidence (0.95) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00062",
+    "resolved_at": "2026-08-31T15:59:02.556660",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "SIM-PAY-001",
+    "resolved_at": "2026-09-01T13:55:41.178089",
+    "root_cause": "UTR_MISMATCH",
+    "resolution_reason": "Initial policy pass: high confidence assumed"
+  },
+  {
+    "payment_id": "SIM-PAY-002",
+    "resolved_at": "2026-09-01T13:55:41.181090",
+    "root_cause": "FEE_MISMATCH",
+    "resolution_reason": "Initial policy pass: assumed low-value case"
+  },
+  {
+    "payment_id": "SIM-PAY-003",
+    "resolved_at": "2026-09-01T13:55:41.183337",
+    "root_cause": "TAX_MISMATCH",
+    "resolution_reason": "Initial policy pass: near-threshold confidence rounded up"
+  },
+  {
+    "payment_id": "PAY-00004",
+    "resolved_at": "2026-09-01T14:12:35.984764",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00150",
+    "resolved_at": "2026-09-01T14:12:43.119728",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00084",
+    "resolved_at": "2026-09-01T14:13:37.847048",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (0.95) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00096",
+    "resolved_at": "2026-09-01T14:14:30.705163",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (0.95) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00158",
+    "resolved_at": "2026-09-01T14:15:57.038108",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (0.95) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00079",
+    "resolved_at": "2026-09-01T14:16:28.015610",
+    "root_cause": "AMOUNT_MISMATCH",
+    "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
+  }
+]

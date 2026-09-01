@@ -1,0 +1,946 @@
+[
+  {
+    "payment_id": "PAY-00046",
+    "escalated_at": "2026-08-31T15:55:45.825937",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement record exists but is missing from the bank ledger. Additionally, the temporal sequence of the refund occurring after the settlement date requires manual review to ensure the net_amount was adjusted correctly in the accounting system.",
+    "amount_at_risk": 172425.68,
+    "priority": "HIGH"
+  },
+  {
+    "payment_id": "PAY-00065",
+    "escalated_at": "2026-08-31T15:55:50.879565",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The UTRs match, but the monetary discrepancy of 68.07 units is significant and requires review to determine if this is an unauthorized bank-side fee, a remittance error, or an unaccounted adjustment.",
+    "amount_at_risk": 167174.78,
+    "priority": "HIGH"
+  },
+  {
+    "payment_id": "PAY-00057",
+    "escalated_at": "2026-08-31T15:55:55.870550",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "There is a significant discrepancy between the calculated settlement, the recorded settlement net, and the actual bank credit, suggesting a systemic error in settlement processing logic that requires manual audit.",
+    "amount_at_risk": 100204.75,
+    "priority": "HIGH"
+  },
+  {
+    "payment_id": "PAY-00161",
+    "escalated_at": "2026-08-31T15:56:01.653737",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The bank entry amount does not match the reconciled settlement net, indicating a potential discrepancy between the payment processor's settlement ledger and the actual cash credited to the bank account.",
+    "amount_at_risk": 59075.71,
+    "priority": "HIGH"
+  },
+  {
+    "payment_id": "PAY-00045",
+    "escalated_at": "2026-08-31T15:56:06.092523",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement was processed by the gateway but the corresponding bank deposit is missing. This requires manual reconciliation against the bank's transaction feed to determine if it is a delayed settlement or a missing credit entry.",
+    "amount_at_risk": 45964.92,
+    "priority": "MEDIUM"
+  },
+  {
+    "payment_id": "PAY-00151",
+    "escalated_at": "2026-08-31T15:56:17.249200",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The UTR-matched bank credit does not equal the settlement net amount. Human review is required to determine if the \u20b958.35 variance is a miscalculation in the settlement metadata or an unrecorded adjustment.",
+    "amount_at_risk": 21694.53,
+    "priority": "MEDIUM"
+  },
+  {
+    "payment_id": "PAY-00048",
+    "escalated_at": "2026-08-31T15:56:23.122049",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The discrepancy between the calculated settlement net and the actual bank credit of \u20b935.87 suggests an error in either the fee/tax calculation or an auxiliary adjustment not captured in the system records. This requires manual verification by the finance reconciliation team.",
+    "amount_at_risk": 18817.18,
+    "priority": "MEDIUM"
+  },
+  {
+    "payment_id": "PAY-00023",
+    "escalated_at": "2026-08-31T15:56:34.546685",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The UTR matches, but the amount mismatch is material and cannot be explained by the provided settlement record, suggesting the bank entry might contain a combined payment or a processing error at the bank/gateway level.",
+    "amount_at_risk": 4992.43,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00176",
+    "escalated_at": "2026-08-31T15:56:44.176145",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement process is complete, but the absence of a bank entry suggests a failure in bank statement ingestion or a missing deposit, requiring manual verification with the banking partner.",
+    "amount_at_risk": 4927.59,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00049",
+    "escalated_at": "2026-08-31T15:56:49.421455",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "There is a material discrepancy between the reconciled settlement amount and the actual bank credit amount. As the UTRs match, this suggests either an error in the settlement processing or an unauthorized deduction at the bank/intermediary level that requires manual investigation.",
+    "amount_at_risk": 4764.41,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00111",
+    "escalated_at": "2026-08-31T15:56:54.141341",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The financial lifecycle is complete on the platform side but lacks the final bank confirmation. This requires manual verification of the bank statement for the expected settlement date to confirm if the transaction was processed despite the missing entry in the system.",
+    "amount_at_risk": 4635.32,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00092",
+    "escalated_at": "2026-08-31T15:56:58.151950",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The financial discrepancy between the computed net settlement and the actual bank credit requires verification of the fee/tax calculation logic or potential manual adjustments made by the gateway.",
+    "amount_at_risk": 4581.28,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00110",
+    "escalated_at": "2026-08-31T15:57:03.314532",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The UTR is correct but the amount significantly differs from the calculated net; this requires human investigation into the bank's processing logs or a potential issue with the gateway's disbursement file for this UTR.",
+    "amount_at_risk": 4320.61,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00084",
+    "escalated_at": "2026-08-31T15:57:08.561384",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "reason": "The presence of a duplicate bank entry requires manual intervention by the finance/accounting team to reconcile the bank balance and remove the erroneous ledger entry to prevent overstatement of settlement receipts.",
+    "amount_at_risk": 4181.17,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00117",
+    "escalated_at": "2026-08-31T15:57:11.639666",
+    "root_cause": "UNKNOWN",
+    "reason": "Agent confidence (0.65) below required threshold (0.75) for automated action.",
+    "amount_at_risk": 4146.1,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00093",
+    "escalated_at": "2026-08-31T15:57:14.723350",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The reconciliation is blocked by a missing bank entry despite a valid settlement record. This requires manual verification of the bank statement to confirm if the funds for UTR247709679 were received.",
+    "amount_at_risk": 3941.95,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00021",
+    "escalated_at": "2026-08-31T15:57:17.551201",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The discrepancy of 52.85 indicates either an incorrect fee calculation, an undocumented adjustment in the bank transfer, or a systemic reconciliation error that requires human verification with the payment gateway provider.",
+    "amount_at_risk": 3788.68,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00067",
+    "escalated_at": "2026-08-31T15:57:20.549711",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The reconciliation shows a major discrepancy between the settlement ledger (-80.03) and the actual bank transaction (1704.03) sharing the same UTR. This requires treasury/bank team investigation to determine if the UTR was reused or if the bank entry corresponds to an incorrect settlement record.",
+    "amount_at_risk": 3391.28,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00025",
+    "escalated_at": "2026-08-31T15:57:25.971418",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "reason": "The duplicate bank entry represents a reconciliation imbalance where the bank balance reflects 6543.06 while the ledger reflects only 3271.53 for this UTR. This requires intervention to correct the bank feed data.",
+    "amount_at_risk": 3350.6,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00112",
+    "escalated_at": "2026-08-31T15:57:29.069641",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "A settlement record exists with a specific UTR, but the bank entry is missing. This requires manual reconciliation or a bank statement pull to confirm if the funds were credited to the merchant account.",
+    "amount_at_risk": 3211.39,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00162",
+    "escalated_at": "2026-08-31T15:57:31.420860",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement is recorded, but the bank entry is missing, indicating a potential delay in bank reporting or a missing data feed that requires manual verification against the bank statement.",
+    "amount_at_risk": 2987.4,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00001",
+    "escalated_at": "2026-08-31T15:57:33.595897",
+    "root_cause": "UNKNOWN",
+    "reason": "Agent confidence (0.3) below required threshold (0.75) for automated action.",
+    "amount_at_risk": 2983.36,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00185",
+    "escalated_at": "2026-08-31T15:57:35.858096",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "reason": "The duplicate bank entry represents a reconciliation anomaly that requires manual adjustment or reporting to the banking partner to ensure financial records reflect the single actual inflow.",
+    "amount_at_risk": 2964.47,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00008",
+    "escalated_at": "2026-08-31T15:57:41.757841",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The bank credit amount (2391.398) deviates significantly from the expected net amount (1547.50), suggesting an error in the settlement remittance or an incorrect bank entry linked to the UTR.",
+    "amount_at_risk": 2576.24,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00163",
+    "escalated_at": "2026-08-31T15:57:43.816296",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "While the internal settlement accounting is accurate, the absence of a bank entry suggests a failure in the bank reconciliation feed or an unrecorded cash transfer. Further investigation into the banking interface or external statement files is required.",
+    "amount_at_risk": 2505.02,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00027",
+    "escalated_at": "2026-08-31T15:57:46.542048",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The UTRs match, confirming these records belong together, but there is a persistent monetary discrepancy of \u20b942.57 between the internal settlement ledger and the actual bank inflow that requires investigation by the finance/settlement operations team.",
+    "amount_at_risk": 2494.17,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00160",
+    "escalated_at": "2026-08-31T15:57:49.009403",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The financial lifecycle is stalled because the bank entry corresponding to the settlement UTR is missing, requiring a manual investigation into the bank data feed or the clearing process.",
+    "amount_at_risk": 2308.93,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00002",
+    "escalated_at": "2026-08-31T15:57:51.737512",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "A valid settlement record exists without a corresponding bank entry; this indicates a potential failure in bank feed ingestion or a missing payout file from the banking partner.",
+    "amount_at_risk": 2167.42,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00137",
+    "escalated_at": "2026-08-31T15:57:54.109204",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The discrepancy of 3.72 is unexplained by current ledger data. It requires manual review to determine if this is a bank-side error, an unrecorded fee adjustment, or a systematic reconciliation variance.",
+    "amount_at_risk": 1780.11,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00096",
+    "escalated_at": "2026-08-31T15:57:56.437334",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "reason": "The duplicate bank entry implies a potential double-debit from the merchant's account or a reconciliation reporting error that requires manual verification with the banking partner.",
+    "amount_at_risk": 1721.32,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00094",
+    "escalated_at": "2026-08-31T15:57:59.244299",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "There is a systemic discrepancy between the recorded settlement net amount and the actual bank credit, as well as an internal inconsistency in the settlement record itself (gross - fee - tax does not equal net). This requires manual financial review.",
+    "amount_at_risk": 1704.03,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00100",
+    "escalated_at": "2026-08-31T15:58:01.360473",
+    "root_cause": "UNKNOWN",
+    "reason": "Agent confidence (0.45) below required threshold (0.75) for automated action.",
+    "amount_at_risk": 1692.57,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00044",
+    "escalated_at": "2026-08-31T15:58:03.889650",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "A financial discrepancy exists between the ledger net amount and the actual bank credit. Since the bank credit is the source of truth for cash movement, a human must investigate whether the fee/tax calculation in the system is erroneous or if there was an external adjustment.",
+    "amount_at_risk": 1464.87,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00186",
+    "escalated_at": "2026-08-31T15:58:06.150164",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The reconciliation is blocked by a total absence of bank ledger data. Escalation is required to verify if the bank feed is missing or if the settlement was never actually disbursed.",
+    "amount_at_risk": 1302.93,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00073",
+    "escalated_at": "2026-08-31T15:58:11.860759",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement record exists but the corresponding cash movement has not been ingested or matched, requiring a manual check of the bank feed or ledger to confirm if the disbursement occurred.",
+    "amount_at_risk": 1249.02,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00070",
+    "escalated_at": "2026-08-31T15:58:15.470200",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "While the internal record matches the lifecycle, the bank credit amount for the associated UTR is significantly lower than the system's calculated net settlement, suggesting a potential issue with the payout process or upstream intermediary deduction.",
+    "amount_at_risk": 1176.11,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00035",
+    "escalated_at": "2026-08-31T15:58:17.629550",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "There is a material discrepancy of 9.93 between the system-generated settlement ledger and the actual bank credit, requiring reconciliation of fee/tax structure or adjustment posting.",
+    "amount_at_risk": 1174.67,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00159",
+    "escalated_at": "2026-08-31T15:58:20.540908",
+    "root_cause": "REFUND_TIMING_CONFLICT",
+    "reason": "While the refund timing clarifies why the settlement didn't include them, the settlement record SET-00159 itself contains a significant internal arithmetic error (Gross vs Net), necessitating human review of the settlement calculation logic.",
+    "amount_at_risk": 1155.04,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00199",
+    "escalated_at": "2026-08-31T15:58:54.948894",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The reconciliation shows the settlement was processed internally but cannot be verified against actual bank records. A manual check of the bank statement for the UTR is required to confirm if the funds were received.",
+    "amount_at_risk": 1133.82,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00168",
+    "escalated_at": "2026-08-31T15:58:57.844587",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "reason": "The system has identified a duplicate credit entry in the bank statement for a single settlement. This requires human intervention to verify if the bank actually settled the amount twice (an error) or if the ledger contains a duplicate entry that needs to be ignored or purged.",
+    "amount_at_risk": 1129.9,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00085",
+    "escalated_at": "2026-08-31T15:59:06.554849",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The financial settlement record is inaccurate regarding the net amount, even though the bank entry correctly reflects the net-of-refund cash flow. Manual reconciliation adjustment is required to fix the settlement record accuracy.",
+    "amount_at_risk": 882.33,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00038",
+    "escalated_at": "2026-08-31T15:59:09.268041",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement has been generated and a UTR assigned, but the corresponding bank transaction record is missing. The finance team should verify the bank statement for UTR480284107 to confirm receipt.",
+    "amount_at_risk": 848.75,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00140",
+    "escalated_at": "2026-08-31T15:59:11.723544",
+    "root_cause": "GENUINE_DISCREPANCY",
+    "reason": "The financial records are consistent, but the absence of the source payment record prevents full auditability of the transaction lifecycle. Human intervention is required to verify if the payment record was dropped during ingestion or exists elsewhere.",
+    "amount_at_risk": 823.1,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00041",
+    "escalated_at": "2026-08-31T15:59:14.886637",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The bank credit does not match the system's settlement calculation and the discrepancy cannot be explained by standard fee/tax deductions, suggesting a potential failure in the refund settlement process or an error in the banking disbursement.",
+    "amount_at_risk": 691.21,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00183",
+    "escalated_at": "2026-08-31T15:59:20.142883",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "Multiple discrepancies exist between settlement records, expected refund timing, and actual bank credit amounts, indicating potential processing errors at the gateway or settlement level.",
+    "amount_at_risk": 661.3,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00194",
+    "escalated_at": "2026-08-31T15:59:24.848947",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "A reconciliation discrepancy exists where the settlement has been processed internally but the funds have not been matched to a bank statement entry. Investigation is required to determine if the bank statement is delayed or if the payment failed to transfer.",
+    "amount_at_risk": 557.6,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00158",
+    "escalated_at": "2026-08-31T15:59:29.744886",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "reason": "The duplicate bank entry indicates a reconciliation anomaly where the bank has credited the merchant twice for a single settlement; this requires manual intervention to flag or reverse the erroneous credit.",
+    "amount_at_risk": 440.16,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00177",
+    "escalated_at": "2026-08-31T15:59:35.967381",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "There is a material unexplained discrepancy of \u20b9150.75 between the reconciled settlement amount and the bank's actual credit. This requires manual investigation to determine if the bank transaction was erroneously processed or if there were hidden deductions not captured in the system records.",
+    "amount_at_risk": 433.01,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00099",
+    "escalated_at": "2026-08-31T15:59:41.083631",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The bank entry credit amount does not match the settlement net amount despite a UTR match, indicating the bank record likely contains additional transactions not associated with this specific settlement ID.",
+    "amount_at_risk": 420.18,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00009",
+    "escalated_at": "2026-08-31T15:59:45.157841",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "A financial discrepancy of 0.89 exists between the ledger settlement and the actual bank inflow. This requires manual reconciliation against the payment gateway's raw settlement report to determine if the fee/tax was applied differently than recorded in the system or if this constitutes a banking error/adjustment.",
+    "amount_at_risk": 413.73,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00153",
+    "escalated_at": "2026-08-31T15:59:50.606697",
+    "root_cause": "FEE_MISMATCH",
+    "reason": "The settlement record contains internal mathematical inconsistencies and does not align with the bank entry, suggesting an issue with the fee/tax logging process at the gateway level.",
+    "amount_at_risk": 386.57,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00198",
+    "escalated_at": "2026-08-31T15:59:58.845791",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The UTR match exists, but the bank credit amount is significantly larger than the settlement amount, suggesting this bank entry likely aggregates multiple settlements or includes incorrect data.",
+    "amount_at_risk": 351.75,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00017",
+    "escalated_at": "2026-08-31T16:00:05.174401",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "There is a confirmed variance of 0.62 between the settlement system and the bank's actual credit. While the internal math is correct, the bank entry indicates a mismatch that requires reconciliation with the payment gateway/bank.",
+    "amount_at_risk": 294.73,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00053",
+    "escalated_at": "2026-08-31T16:00:09.251196",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "While the settlement arithmetic is internally consistent, there is a material discrepancy between the settlement net and the actual bank credit, requiring investigation into whether the bank entry refers to a different transaction or if the settlement file was misreported.",
+    "amount_at_risk": 222.55,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00079",
+    "escalated_at": "2026-08-31T16:00:14.221247",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The settlement record contains an incorrect net amount calculation despite the funds having been correctly settled to the bank. Manual correction of the settlement record or internal ledger is required.",
+    "amount_at_risk": 128.89,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00136",
+    "escalated_at": "2026-08-31T16:19:26.319537",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The financial mismatch of 2.92 between the system settlement record and the bank entry requires manual investigation by the finance team to determine if there was an incorrect fee/tax calculation or an external adjustment.",
+    "amount_at_risk": 1490.55,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00146",
+    "escalated_at": "2026-08-31T16:19:32.151023",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The system records are internally consistent, but the bank has credited an amount 4.97 higher than the reconciled settlement. Human verification of bank statement details or reconciliation adjustment is required as this indicates an imbalance between processed settlements and actual banking cash movement.",
+    "amount_at_risk": 3815.01,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00190",
+    "escalated_at": "2026-08-31T16:19:38.147734",
+    "root_cause": "REFUND_TIMING_CONFLICT",
+    "reason": "Amount at risk (\u20b9109,154.11) exceeds materiality threshold (\u20b950,000.00); escalating regardless of agent recommendation.",
+    "amount_at_risk": 109154.11,
+    "priority": "HIGH"
+  },
+  {
+    "payment_id": "SIM-PAY-001",
+    "escalated_at": "2026-09-01T13:55:41.178840",
+    "root_cause": "UTR_MISMATCH",
+    "reason": "Auto-corrected by verification loop: original action 'AUTO_RESOLVE' failed re-verification (WARNING: re-check disagrees \u2014 got ESCALATE.)",
+    "amount_at_risk": 1500.0,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "SIM-PAY-002",
+    "escalated_at": "2026-09-01T13:55:41.181839",
+    "root_cause": "FEE_MISMATCH",
+    "reason": "Auto-corrected by verification loop: original action 'AUTO_RESOLVE' failed re-verification (WARNING: re-check disagrees \u2014 got ESCALATE.)",
+    "amount_at_risk": 85000.0,
+    "priority": "HIGH"
+  },
+  {
+    "payment_id": "SIM-PAY-003",
+    "escalated_at": "2026-09-01T13:55:41.183337",
+    "root_cause": "TAX_MISMATCH",
+    "reason": "Auto-corrected by verification loop: original action 'AUTO_RESOLVE' failed re-verification (WARNING: re-check disagrees \u2014 got REVIEW.)",
+    "amount_at_risk": 2200.0,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00046",
+    "escalated_at": "2026-09-01T14:12:19.537954",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The reconciliation cannot be finalized without the bank statement records. Additionally, the settlement net amount suggests a potential discrepancy in how the settlement was recorded relative to the refund timestamp.",
+    "amount_at_risk": 172425.68,
+    "priority": "HIGH"
+  },
+  {
+    "payment_id": "PAY-00065",
+    "escalated_at": "2026-09-01T14:12:22.736527",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The UTR matches but the amounts diverge significantly (68.06 INR). This requires investigation into whether additional undisclosed fees or deductions were applied by the acquiring bank or gateway at the time of credit.",
+    "amount_at_risk": 167174.78,
+    "priority": "HIGH"
+  },
+  {
+    "payment_id": "PAY-00190",
+    "escalated_at": "2026-09-01T14:12:25.142663",
+    "root_cause": "REFUND_TIMING_CONFLICT",
+    "reason": "Amount at risk (\u20b9109,154.11) exceeds materiality threshold (\u20b950,000.00); escalating regardless of agent recommendation.",
+    "amount_at_risk": 109154.11,
+    "priority": "HIGH"
+  },
+  {
+    "payment_id": "PAY-00057",
+    "escalated_at": "2026-09-01T14:12:28.773369",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The reconciliation reveals a discrepancy between the settlement record's calculation logic and its stated timeline, as well as an unresolved variance between the bank credit and the settlement net amount. Human review is required to verify the settlement processing rules for this merchant.",
+    "amount_at_risk": 100204.75,
+    "priority": "HIGH"
+  },
+  {
+    "payment_id": "PAY-00161",
+    "escalated_at": "2026-09-01T14:12:31.465408",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The bank credit does not reflect the processed refund, indicating a potential reconciliation failure between the payment gateway's settlement file and the actual bank disbursement.",
+    "amount_at_risk": 59075.71,
+    "priority": "HIGH"
+  },
+  {
+    "payment_id": "PAY-00045",
+    "escalated_at": "2026-09-01T14:12:33.575211",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The financial settlement has been processed on the gateway side, but the bank entry is missing. This requires manual verification of the bank statement to confirm if the transfer occurred or if the payment is delayed at the banking partner level.",
+    "amount_at_risk": 45964.92,
+    "priority": "MEDIUM"
+  },
+  {
+    "payment_id": "PAY-00151",
+    "escalated_at": "2026-09-01T14:12:38.283480",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The discrepancy of 58.35 requires a manual audit of the settlement ledger or bank processing rules to determine why the bank received a higher credit than the system-calculated net amount.",
+    "amount_at_risk": 21694.53,
+    "priority": "MEDIUM"
+  },
+  {
+    "payment_id": "PAY-00048",
+    "escalated_at": "2026-09-01T14:12:40.800364",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The discrepancy of 35.87 between the settlement net and bank credit, coupled with the internal calculation mismatch, requires manual review to identify if incorrect fee structures or external deductions were applied.",
+    "amount_at_risk": 18817.18,
+    "priority": "MEDIUM"
+  },
+  {
+    "payment_id": "PAY-00023",
+    "escalated_at": "2026-09-01T14:12:45.739838",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The UTR match confirms the bank entry is related, but the amount mismatch indicates this is a bulk settlement entry. A human investigator should verify if other payments were included in this specific UTR transfer.",
+    "amount_at_risk": 4992.43,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00127",
+    "escalated_at": "2026-09-01T14:12:48.253449",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "reason": "The system identifies a duplicate bank entry for a single settlement. This requires reconciliation with the bank to correct the double-entry error and prevent financial statement inflation.",
+    "amount_at_risk": 4937.44,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00176",
+    "escalated_at": "2026-09-01T14:12:50.551884",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The transaction is fully processed internally, but cannot be reconciled without the corresponding bank statement entry for UTR UTR399240862.",
+    "amount_at_risk": 4927.59,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00049",
+    "escalated_at": "2026-09-01T14:12:52.842301",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The discrepancy is material and suggests either a potential error in the payout process from the gateway or a partial/incorrect bank credit that requires manual investigation by the finance operations team.",
+    "amount_at_risk": 4764.41,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00111",
+    "escalated_at": "2026-09-01T14:12:55.063724",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement has been recorded in the internal ledger, but the absence of a bank entry suggests a reconciliation gap. A manual check of the bank statement for the provided UTR is required to confirm if the funds were received.",
+    "amount_at_risk": 4635.32,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00092",
+    "escalated_at": "2026-09-01T14:12:57.260948",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "There is a material financial discrepancy of 74.74 between the settlement system records and the bank entry. This requires manual reconciliation with the payment gateway provider to determine if fees were lower than recorded or if an adjustment occurred that is not reflected in the settlement record.",
+    "amount_at_risk": 4581.28,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00110",
+    "escalated_at": "2026-09-01T14:13:34.340674",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The UTR matches, but the bank credit is significantly lower than the calculated settlement net amount, indicating a potential banking-side deduction, payout failure, or downstream processing error that requires investigation by the finance/treasury operations team.",
+    "amount_at_risk": 4320.61,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00117",
+    "escalated_at": "2026-09-01T14:13:40.451257",
+    "root_cause": "GENUINE_DISCREPANCY",
+    "reason": "The system lacks the source payment record, preventing a full audit of the lifecycle, despite the settlement and bank records matching.",
+    "amount_at_risk": 4146.1,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00093",
+    "escalated_at": "2026-09-01T14:13:42.468394",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement record indicates the funds were processed, but the corresponding bank entry is missing from the provided data. Manual investigation is required to determine if the funds were deposited under a different UTR or if there is a delay in bank statement ingestion.",
+    "amount_at_risk": 3941.95,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00146",
+    "escalated_at": "2026-09-01T14:13:45.557745",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The difference between the recorded settlement net and the bank credit indicates an accounting discrepancy in fee/tax processing or a disbursement error that requires human reconciliation.",
+    "amount_at_risk": 3815.01,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00021",
+    "escalated_at": "2026-09-01T14:13:47.876033",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The discrepancy of 52.85 indicates either a miscalculation in the settlement file or an undocumented bank adjustment that requires manual financial review.",
+    "amount_at_risk": 3788.68,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00067",
+    "escalated_at": "2026-09-01T14:13:50.570047",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The UTR match confirms the records are linked, but the monetary discrepancy between the bank credit and the settlement net requires manual reconciliation with the banking partner or payment gateway.",
+    "amount_at_risk": 3391.28,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00025",
+    "escalated_at": "2026-09-01T14:13:55.781089",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "reason": "The duplicate bank entry implies an over-credit to the merchant's account. This requires a human investigation to confirm the bank duplicate and trigger a recovery or notification process with the payment gateway or banking partner.",
+    "amount_at_risk": 3350.6,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00112",
+    "escalated_at": "2026-09-01T14:13:59.211142",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement record exists and is mathematically valid, but the lack of a bank entry prevents final reconciliation and verification of funds receipt. Human intervention is required to investigate the missing bank statement record.",
+    "amount_at_risk": 3211.39,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00162",
+    "escalated_at": "2026-09-01T14:14:02.038634",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement was processed by the gateway, but the corresponding bank entry is absent, indicating a potential delay in bank reporting or a reconciliation gap that requires manual investigation.",
+    "amount_at_risk": 2987.4,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00001",
+    "escalated_at": "2026-09-01T14:14:05.340096",
+    "root_cause": "UNKNOWN",
+    "reason": "The system lacks the base transaction data (Payment/Order records) required to audit the validity of the settlement, despite the settlement and bank records matching internally.",
+    "amount_at_risk": 2983.36,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00185",
+    "escalated_at": "2026-09-01T14:14:09.361005",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "reason": "The duplicate bank entry suggests a reconciliation error at the bank or statement ingestion level; human intervention is required to flag the duplicate credit entry for reversal or adjustment.",
+    "amount_at_risk": 2964.47,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00187",
+    "escalated_at": "2026-09-01T14:14:13.075277",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "reason": "The system identifies a duplicate bank entry which requires manual reconciliation to ensure the duplicate credit is reversed or ignored in the final ledger state.",
+    "amount_at_risk": 2831.29,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00008",
+    "escalated_at": "2026-09-01T14:14:15.779167",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The UTR match exists, but the financial values and transaction dates are non-reconcilable, suggesting that the bank entry may be associated with a different batch or that settlement processing is misaligned.",
+    "amount_at_risk": 2576.24,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00163",
+    "escalated_at": "2026-09-01T14:14:18.784157",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The system lacks the necessary bank ledger data to confirm the receipt of funds for the completed settlement; manual investigation of bank statements is required to confirm the UTR.",
+    "amount_at_risk": 2505.02,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00027",
+    "escalated_at": "2026-09-01T14:14:21.808230",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The discrepancy indicates either a fee calculation error in the settlement engine or a misallocation of funds, requiring investigation into why the bank credit exceeds the recorded net settlement amount.",
+    "amount_at_risk": 2494.17,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00160",
+    "escalated_at": "2026-09-01T14:14:24.001135",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The funds have been settled internally but no bank entry exists; the accounting team must investigate if the disbursement file failed or if the bank statement import is incomplete.",
+    "amount_at_risk": 2308.93,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00002",
+    "escalated_at": "2026-09-01T14:14:26.106155",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The system records show a processed settlement with a UTR, but the lack of a matching bank entry requires verification with the banking partner to ensure the funds were successfully disbursed.",
+    "amount_at_risk": 2167.42,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00137",
+    "escalated_at": "2026-09-01T14:14:28.405228",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "While the UTRs match, the monetary discrepancy of 3.72 requires manual investigation into the settlement breakdown (fees/taxes) or potential bank processing adjustments not reflected in the settlement system.",
+    "amount_at_risk": 1780.11,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00094",
+    "escalated_at": "2026-09-01T14:14:40.628738",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The settlement record contains internal mathematical inconsistencies (gross minus fee/tax does not equal stated net), and the bank deposit does not match the settlement record despite a shared UTR, indicating a data integrity issue in the settlement system.",
+    "amount_at_risk": 1704.03,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00100",
+    "escalated_at": "2026-09-01T14:14:43.351947",
+    "root_cause": "GENUINE_DISCREPANCY",
+    "reason": "The financial settlement is consistent, but the absence of the underlying payment record indicates a systemic integration or data-sync failure that requires manual investigation by the engineering or accounting team.",
+    "amount_at_risk": 1692.57,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00136",
+    "escalated_at": "2026-09-01T14:14:45.448797",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The reconciliation shows a clear monetary discrepancy between the settlement record and the bank credit. Human investigation is required to determine why the bank credit is 2.92 higher than the calculated net amount.",
+    "amount_at_risk": 1490.55,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00044",
+    "escalated_at": "2026-09-01T14:14:47.864272",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "There is a clear discrepancy between the internal accounting (fees/taxes) and the actual bank settlement, indicating either a calculation error in the fee engine or an unexpected adjustment by the payment gateway.",
+    "amount_at_risk": 1464.87,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00186",
+    "escalated_at": "2026-09-01T14:14:50.452455",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement has been generated but is not reflected in the bank records provided; this requires a review of bank file ingestion or potential reconciliation lag.",
+    "amount_at_risk": 1302.93,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00104",
+    "escalated_at": "2026-09-01T14:14:52.662151",
+    "root_cause": "GENUINE_DISCREPANCY",
+    "reason": "While the movement of funds is reconciled, the absence of the source payment record violates data integrity requirements for audit trails and necessitates investigation into the upstream data sync between the payment gateway and this ledger.",
+    "amount_at_risk": 1299.73,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00073",
+    "escalated_at": "2026-09-01T14:14:54.673780",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement has been generated and the UTR is assigned, but the corresponding bank entry is missing from the provided data. This requires verification against the actual bank statement or reconciliation source.",
+    "amount_at_risk": 1249.02,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00070",
+    "escalated_at": "2026-09-01T14:14:57.283973",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "There is a material discrepancy between the expected settlement net, the recorded settlement net, and the actual bank credit amount received. Human oversight is required to verify if the bank entry is incorrectly mapped or if there are additional unrecorded deductions.",
+    "amount_at_risk": 1176.11,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00035",
+    "escalated_at": "2026-09-01T14:14:59.675912",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "There is a discrepancy of 9.93 between the system-calculated net amount and the actual bank credit. Since the UTRs match, this indicates a potential manual adjustment, settlement aggregation error, or bank-side discrepancy that requires investigation by the finance/treasury team.",
+    "amount_at_risk": 1174.67,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00159",
+    "escalated_at": "2026-09-01T14:15:02.489229",
+    "root_cause": "REFUND_TIMING_CONFLICT",
+    "reason": "While the refund timing conflict is resolved, there is an unexplained discrepancy between the expected settlement net (1127.78) and the actual settlement net (-27.26) that warrants human investigation.",
+    "amount_at_risk": 1155.04,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00199",
+    "escalated_at": "2026-09-01T14:15:04.802639",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The system confirms the settlement occurred but the bank entry is missing; this requires a treasury or bank reconciliation team to verify the status of UTR731130400 with the banking partner.",
+    "amount_at_risk": 1133.82,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00168",
+    "escalated_at": "2026-09-01T14:15:38.086564",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "reason": "The duplicate bank entry needs to be flagged to the banking partner or reconciliation team for adjustment/reversal, as the entity has effectively received the same settlement funds twice in the bank records.",
+    "amount_at_risk": 1129.9,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00062",
+    "escalated_at": "2026-09-01T14:15:40.389863",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "reason": "The duplicate bank entries represent an overpayment from the bank to the merchant's account; this requires a manual reversal or communication with the banking partner.",
+    "amount_at_risk": 902.45,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00085",
+    "escalated_at": "2026-09-01T14:15:43.645072",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The settlement record is inaccurate regarding the net amount, but the bank transaction is correct. This requires reconciliation/adjustment of the internal settlement ledger record to reflect reality.",
+    "amount_at_risk": 882.33,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00038",
+    "escalated_at": "2026-09-01T14:15:45.519048",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement has been generated and a UTR assigned, but the corresponding bank statement entry is missing from the system, preventing reconciliation verification.",
+    "amount_at_risk": 848.75,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00140",
+    "escalated_at": "2026-09-01T14:15:47.615856",
+    "root_cause": "GENUINE_DISCREPANCY",
+    "reason": "The financial settlement is reconciled, but the underlying payment record is missing from the system. This requires manual audit to determine if this is a logging failure or a database integrity issue.",
+    "amount_at_risk": 823.1,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00041",
+    "escalated_at": "2026-09-01T14:15:50.415562",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The bank credit does not match the reconciled settlement amount, indicating a potential overpayment or processing error by the gateway during the fund transfer to the bank.",
+    "amount_at_risk": 691.21,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00194",
+    "escalated_at": "2026-09-01T14:15:54.744139",
+    "root_cause": "MISSING_BANK_ENTRY",
+    "reason": "The settlement record exists, but the corresponding bank reconciliation entry is absent, suggesting a potential delay in bank reporting or a failure in the automated bank statement ingestion process.",
+    "amount_at_risk": 557.6,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00177",
+    "escalated_at": "2026-09-01T14:15:59.358543",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The bank entry credit does not match the generated settlement record, suggesting a potential error in the banking instruction, a partial settlement, or an unauthorized deduction that requires investigation by the finance operations team.",
+    "amount_at_risk": 433.01,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00099",
+    "escalated_at": "2026-09-01T14:16:01.960309",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The UTR-linked bank entry does not reconcile with the settlement amount, and the temporal discrepancy between the bank date and settlement date suggests an underlying accounting or batching issue requiring manual investigation.",
+    "amount_at_risk": 420.18,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00009",
+    "escalated_at": "2026-09-01T14:16:04.365995",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The discrepancy of 0.89 suggests an inconsistency between the internal fee/tax logic and the actual settlement processed by the gateway; manual review is required to determine if the internal fee/tax configuration is outdated or incorrect.",
+    "amount_at_risk": 413.73,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00153",
+    "escalated_at": "2026-09-01T14:16:06.971856",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "There is a significant unexplained variance (-6.42) between the calculated settlement net and the actual bank entry, which cannot be explained by the refund timing.",
+    "amount_at_risk": 386.57,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00198",
+    "escalated_at": "2026-09-01T14:16:09.494610",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The bank entry credit amount is inconsistent with the individual settlement amount, indicating a potential batch processing issue or bank record error that requires manual investigation.",
+    "amount_at_risk": 351.75,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00017",
+    "escalated_at": "2026-09-01T14:16:12.186933",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "The reconciliation shows a variance of \u20b90.62 between the settlement net and the actual bank credit, which requires investigation by the finance operations team to determine if this is an accounting error, an unaccounted fee adjustment, or a settlement processing error.",
+    "amount_at_risk": 294.73,
+    "priority": "LOW"
+  },
+  {
+    "payment_id": "PAY-00053",
+    "escalated_at": "2026-09-01T14:16:14.980373",
+    "root_cause": "AMOUNT_MISMATCH",
+    "reason": "Agent confidence (0.7) below required threshold (0.75) for automated action.",
+    "amount_at_risk": 222.55,
+    "priority": "LOW"
+  }
+]

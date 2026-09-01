@@ -1,0 +1,4783 @@
+[
+  {
+    "payment_id": "PAY-00001",
+    "settlement_id": "SET-00001",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00001",
+      "candidate_bank_txn_ids": [
+        "BANK-00001"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "MISSING_PAYMENT_RECORD",
+      "expected_net": null,
+      "actual_net": null
+    }
+  },
+  {
+    "payment_id": "PAY-00002",
+    "settlement_id": "SET-00002",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2116.27,
+      "actual_net": 2116.27
+    }
+  },
+  {
+    "payment_id": "PAY-00003",
+    "settlement_id": "SET-00003",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00003",
+      "candidate_bank_txn_ids": [
+        "BANK-00003"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 854.32,
+      "actual_net": 854.32
+    }
+  },
+  {
+    "payment_id": "PAY-00004",
+    "settlement_id": "SET-00004",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00004",
+        "BANK-00004-DUP"
+      ],
+      "exception_type": "DUPLICATE_BANK_ENTRY",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 36228.59,
+      "actual_net": 36228.58
+    }
+  },
+  {
+    "payment_id": "PAY-00005",
+    "settlement_id": "SET-00005",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00005",
+      "candidate_bank_txn_ids": [
+        "BANK-00005"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3195.72,
+      "actual_net": 3195.72
+    }
+  },
+  {
+    "payment_id": "PAY-00006",
+    "settlement_id": "SET-00006",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00006",
+      "candidate_bank_txn_ids": [
+        "BANK-00006"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1419.42,
+      "actual_net": 1419.41
+    }
+  },
+  {
+    "payment_id": "PAY-00007",
+    "settlement_id": "SET-00007",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00007",
+      "candidate_bank_txn_ids": [
+        "BANK-00007"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 489.5,
+      "actual_net": 489.51
+    }
+  },
+  {
+    "payment_id": "PAY-00008",
+    "settlement_id": "SET-00008",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00008"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1547.5,
+      "actual_net": 1547.49
+    }
+  },
+  {
+    "payment_id": "PAY-00009",
+    "settlement_id": "SET-00009",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00009",
+      "candidate_bank_txn_ids": [
+        "BANK-00009"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.89,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "TAX_MISMATCH",
+      "expected_net": 403.97,
+      "actual_net": 403.08
+    }
+  },
+  {
+    "payment_id": "PAY-00010",
+    "settlement_id": "SET-00010",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00010",
+      "candidate_bank_txn_ids": [
+        "BANK-00010"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 42839.87,
+      "actual_net": 42839.87
+    }
+  },
+  {
+    "payment_id": "PAY-00011",
+    "settlement_id": "SET-00011",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00011",
+      "candidate_bank_txn_ids": [
+        "BANK-00011"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4677.64,
+      "actual_net": 4677.64
+    }
+  },
+  {
+    "payment_id": "PAY-00012",
+    "settlement_id": "SET-00012",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00012",
+      "candidate_bank_txn_ids": [
+        "BANK-00012"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3468.56,
+      "actual_net": 3468.56
+    }
+  },
+  {
+    "payment_id": "PAY-00013",
+    "settlement_id": "SET-00013",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00013",
+      "candidate_bank_txn_ids": [
+        "BANK-00013"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 41072.61,
+      "actual_net": 41072.62
+    }
+  },
+  {
+    "payment_id": "PAY-00014",
+    "settlement_id": "SET-00014",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00014",
+      "candidate_bank_txn_ids": [
+        "BANK-00014"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1598.04,
+      "actual_net": 1598.03
+    }
+  },
+  {
+    "payment_id": "PAY-00015",
+    "settlement_id": "SET-00015",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00015",
+      "candidate_bank_txn_ids": [
+        "BANK-00015"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3694.84,
+      "actual_net": 3694.83
+    }
+  },
+  {
+    "payment_id": "PAY-00016",
+    "settlement_id": "SET-00016",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00016",
+      "candidate_bank_txn_ids": [
+        "BANK-00016"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 79.83,
+      "actual_net": 79.83
+    }
+  },
+  {
+    "payment_id": "PAY-00017",
+    "settlement_id": "SET-00017",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00017",
+      "candidate_bank_txn_ids": [
+        "BANK-00017"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.62,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "TAX_MISMATCH",
+      "expected_net": 121.26,
+      "actual_net": 120.63
+    }
+  },
+  {
+    "payment_id": "PAY-00018",
+    "settlement_id": "SET-00018",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00018",
+      "candidate_bank_txn_ids": [
+        "BANK-00018"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2422.79,
+      "actual_net": 2422.79
+    }
+  },
+  {
+    "payment_id": "PAY-00019",
+    "settlement_id": "SET-00019",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00019",
+      "candidate_bank_txn_ids": [
+        "BANK-00019"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3518.53,
+      "actual_net": 3518.53
+    }
+  },
+  {
+    "payment_id": "PAY-00020",
+    "settlement_id": "SET-00020",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00020",
+      "candidate_bank_txn_ids": [
+        "BANK-00020"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3269.68,
+      "actual_net": 3269.67
+    }
+  },
+  {
+    "payment_id": "PAY-00021",
+    "settlement_id": "SET-00021",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00021"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "FEE_MISMATCH",
+      "expected_net": 3699.27,
+      "actual_net": 3646.42
+    }
+  },
+  {
+    "payment_id": "PAY-00022",
+    "settlement_id": "SET-00022",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00022",
+      "candidate_bank_txn_ids": [
+        "BANK-00022"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4806.24,
+      "actual_net": 4806.24
+    }
+  },
+  {
+    "payment_id": "PAY-00023",
+    "settlement_id": "SET-00023",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00023"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4874.61,
+      "actual_net": 4874.61
+    }
+  },
+  {
+    "payment_id": "PAY-00024",
+    "settlement_id": "SET-00024",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00024",
+      "candidate_bank_txn_ids": [
+        "BANK-00024"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 30450.76,
+      "actual_net": 30450.76
+    }
+  },
+  {
+    "payment_id": "PAY-00025",
+    "settlement_id": "SET-00025",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00025",
+        "BANK-00025-DUP"
+      ],
+      "exception_type": "DUPLICATE_BANK_ENTRY",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3271.53,
+      "actual_net": 3271.53
+    }
+  },
+  {
+    "payment_id": "PAY-00026",
+    "settlement_id": "SET-00026",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00026",
+      "candidate_bank_txn_ids": [
+        "BANK-00026"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3098.6,
+      "actual_net": 3098.6
+    }
+  },
+  {
+    "payment_id": "PAY-00027",
+    "settlement_id": "SET-00027",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00027"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "FEE_MISMATCH",
+      "expected_net": 2435.31,
+      "actual_net": 2392.74
+    }
+  },
+  {
+    "payment_id": "PAY-00028",
+    "settlement_id": "SET-00028",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00028",
+      "candidate_bank_txn_ids": [
+        "BANK-00028"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3864.73,
+      "actual_net": 3864.73
+    }
+  },
+  {
+    "payment_id": "PAY-00029",
+    "settlement_id": "SET-00029",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00029",
+      "candidate_bank_txn_ids": [
+        "BANK-00029"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4806.58,
+      "actual_net": 4806.58
+    }
+  },
+  {
+    "payment_id": "PAY-00030",
+    "settlement_id": "SET-00030",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00030",
+      "candidate_bank_txn_ids": [
+        "BANK-00030"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 119199.16,
+      "actual_net": 119199.17
+    }
+  },
+  {
+    "payment_id": "PAY-00031",
+    "settlement_id": "SET-00031",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00031",
+      "candidate_bank_txn_ids": [
+        "BANK-00031"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1765.0,
+      "actual_net": 1765.0
+    }
+  },
+  {
+    "payment_id": "PAY-00032",
+    "settlement_id": "SET-00032",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00032",
+      "candidate_bank_txn_ids": [
+        "BANK-00032"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 20223.83,
+      "actual_net": 20223.82
+    }
+  },
+  {
+    "payment_id": "PAY-00033",
+    "settlement_id": "SET-00033",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00033",
+      "candidate_bank_txn_ids": [
+        "BANK-00033"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3485.05,
+      "actual_net": 3485.05
+    }
+  },
+  {
+    "payment_id": "PAY-00034",
+    "settlement_id": "SET-00034",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00034",
+      "candidate_bank_txn_ids": [
+        "BANK-00034"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2517.98,
+      "actual_net": 2517.98
+    }
+  },
+  {
+    "payment_id": "PAY-00035",
+    "settlement_id": "SET-00035",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00035"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "FEE_MISMATCH",
+      "expected_net": 1146.95,
+      "actual_net": 1137.02
+    }
+  },
+  {
+    "payment_id": "PAY-00036",
+    "settlement_id": "SET-00036",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00036",
+      "candidate_bank_txn_ids": [
+        "BANK-00036"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1122.62,
+      "actual_net": 1122.63
+    }
+  },
+  {
+    "payment_id": "PAY-00037",
+    "settlement_id": "SET-00037",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00037",
+      "candidate_bank_txn_ids": [
+        "BANK-00037"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4244.97,
+      "actual_net": 4244.97
+    }
+  },
+  {
+    "payment_id": "PAY-00038",
+    "settlement_id": "SET-00038",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 828.71,
+      "actual_net": 828.72
+    }
+  },
+  {
+    "payment_id": "PAY-00039",
+    "settlement_id": "SET-00039",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00039",
+      "candidate_bank_txn_ids": [
+        "BANK-00039"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1172.41,
+      "actual_net": 1172.4
+    }
+  },
+  {
+    "payment_id": "PAY-00040",
+    "settlement_id": "SET-00040",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00040",
+      "candidate_bank_txn_ids": [
+        "BANK-00040"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2426.06,
+      "actual_net": 2426.05
+    }
+  },
+  {
+    "payment_id": "PAY-00041",
+    "settlement_id": "SET-00041",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00041"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "FEE_MISMATCH",
+      "expected_net": 490.86,
+      "actual_net": 483.41
+    }
+  },
+  {
+    "payment_id": "PAY-00042",
+    "settlement_id": "SET-00042",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00042",
+      "candidate_bank_txn_ids": [
+        "BANK-00042"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2421.12,
+      "actual_net": 2421.12
+    }
+  },
+  {
+    "payment_id": "PAY-00043",
+    "settlement_id": "SET-00043",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00043",
+      "candidate_bank_txn_ids": [
+        "BANK-00043"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2750.15,
+      "actual_net": 2750.15
+    }
+  },
+  {
+    "payment_id": "PAY-00044",
+    "settlement_id": "SET-00044",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00044"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "FEE_MISMATCH",
+      "expected_net": 1430.3,
+      "actual_net": 1417.69
+    }
+  },
+  {
+    "payment_id": "PAY-00045",
+    "settlement_id": "SET-00045",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 44880.15,
+      "actual_net": 44880.15
+    }
+  },
+  {
+    "payment_id": "PAY-00046",
+    "settlement_id": "SET-00046",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 43896.61,
+      "actual_net": 43896.6
+    }
+  },
+  {
+    "payment_id": "PAY-00047",
+    "settlement_id": "SET-00047",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00047",
+      "candidate_bank_txn_ids": [
+        "BANK-00047"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3524.16,
+      "actual_net": 3524.16
+    }
+  },
+  {
+    "payment_id": "PAY-00048",
+    "settlement_id": "SET-00048",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00048"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "TAX_MISMATCH",
+      "expected_net": 18373.1,
+      "actual_net": 18337.22
+    }
+  },
+  {
+    "payment_id": "PAY-00049",
+    "settlement_id": "SET-00049",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00049"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4651.97,
+      "actual_net": 4651.97
+    }
+  },
+  {
+    "payment_id": "PAY-00050",
+    "settlement_id": "SET-00050",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00050",
+      "candidate_bank_txn_ids": [
+        "BANK-00050"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4702.75,
+      "actual_net": 4702.75
+    }
+  },
+  {
+    "payment_id": "PAY-00051",
+    "settlement_id": "SET-00051",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00051",
+      "candidate_bank_txn_ids": [
+        "BANK-00051"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2124.18,
+      "actual_net": 2124.18
+    }
+  },
+  {
+    "payment_id": "PAY-00052",
+    "settlement_id": "SET-00052",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00052",
+      "candidate_bank_txn_ids": [
+        "BANK-00052"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 101110.87,
+      "actual_net": 101110.88
+    }
+  },
+  {
+    "payment_id": "PAY-00053",
+    "settlement_id": "SET-00053",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00053"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "FEE_MISMATCH",
+      "expected_net": 142.41,
+      "actual_net": 140.24
+    }
+  },
+  {
+    "payment_id": "PAY-00054",
+    "settlement_id": "SET-00054",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00054",
+      "candidate_bank_txn_ids": [
+        "BANK-00054"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2368.65,
+      "actual_net": 2368.65
+    }
+  },
+  {
+    "payment_id": "PAY-00055",
+    "settlement_id": "SET-00055",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00055",
+      "candidate_bank_txn_ids": [
+        "BANK-00055"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3460.35,
+      "actual_net": 3460.35
+    }
+  },
+  {
+    "payment_id": "PAY-00056",
+    "settlement_id": "SET-00056",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00056",
+      "candidate_bank_txn_ids": [
+        "BANK-00056"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4306.16,
+      "actual_net": 4306.16
+    }
+  },
+  {
+    "payment_id": "PAY-00057",
+    "settlement_id": "SET-00057",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00057"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 42106.07,
+      "actual_net": 42106.08
+    }
+  },
+  {
+    "payment_id": "PAY-00058",
+    "settlement_id": "SET-00058",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00058",
+      "candidate_bank_txn_ids": [
+        "BANK-00058"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3631.39,
+      "actual_net": 3631.39
+    }
+  },
+  {
+    "payment_id": "PAY-00059",
+    "settlement_id": "SET-00059",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00059",
+      "candidate_bank_txn_ids": [
+        "BANK-00059"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1333.69,
+      "actual_net": 1333.69
+    }
+  },
+  {
+    "payment_id": "PAY-00060",
+    "settlement_id": "SET-00060",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00060",
+      "candidate_bank_txn_ids": [
+        "BANK-00060"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 104771.82,
+      "actual_net": 104771.81
+    }
+  },
+  {
+    "payment_id": "PAY-00061",
+    "settlement_id": "SET-00061",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00061",
+      "candidate_bank_txn_ids": [
+        "BANK-00061"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": "VALID_NEGATIVE_SETTLEMENT",
+      "expected_net": -96.85,
+      "actual_net": -96.85
+    }
+  },
+  {
+    "payment_id": "PAY-00062",
+    "settlement_id": "SET-00062",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00062",
+        "BANK-00062-DUP"
+      ],
+      "exception_type": "DUPLICATE_BANK_ENTRY",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 881.15,
+      "actual_net": 881.15
+    }
+  },
+  {
+    "payment_id": "PAY-00063",
+    "settlement_id": "SET-00063",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00063",
+      "candidate_bank_txn_ids": [
+        "BANK-00063"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 358.52,
+      "actual_net": 358.51
+    }
+  },
+  {
+    "payment_id": "PAY-00064",
+    "settlement_id": "SET-00064",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00064",
+      "candidate_bank_txn_ids": [
+        "BANK-00064"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 92522.82,
+      "actual_net": 92522.81
+    }
+  },
+  {
+    "payment_id": "PAY-00065",
+    "settlement_id": "SET-00065",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00065"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 163229.45,
+      "actual_net": 163229.46
+    }
+  },
+  {
+    "payment_id": "PAY-00066",
+    "settlement_id": "SET-00066",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00066",
+      "candidate_bank_txn_ids": [
+        "BANK-00066"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 4.9,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": "VALID_NEGATIVE_SETTLEMENT",
+      "expected_net": -17.1,
+      "actual_net": -17.1
+    }
+  },
+  {
+    "payment_id": "PAY-00067",
+    "settlement_id": "SET-00067",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00067"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": "VALID_NEGATIVE_SETTLEMENT",
+      "expected_net": -80.04,
+      "actual_net": -80.03
+    }
+  },
+  {
+    "payment_id": "PAY-00068",
+    "settlement_id": "SET-00068",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00068",
+      "candidate_bank_txn_ids": [
+        "BANK-00068"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": "VALID_NEGATIVE_SETTLEMENT",
+      "expected_net": -20.33,
+      "actual_net": -20.34
+    }
+  },
+  {
+    "payment_id": "PAY-00069",
+    "settlement_id": "SET-00069",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00069",
+      "candidate_bank_txn_ids": [
+        "BANK-00069"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "REFUND_NOT_REFLECTED",
+      "expected_net": -524.82,
+      "actual_net": 2556.6
+    }
+  },
+  {
+    "payment_id": "PAY-00070",
+    "settlement_id": "SET-00070",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00070"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 179.08,
+      "actual_net": 179.07
+    }
+  },
+  {
+    "payment_id": "PAY-00071",
+    "settlement_id": "SET-00071",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00071",
+      "candidate_bank_txn_ids": [
+        "BANK-00071"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3774.89,
+      "actual_net": 3774.89
+    }
+  },
+  {
+    "payment_id": "PAY-00072",
+    "settlement_id": "SET-00072",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00072",
+      "candidate_bank_txn_ids": [
+        "BANK-00072"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2801.89,
+      "actual_net": 2801.89
+    }
+  },
+  {
+    "payment_id": "PAY-00073",
+    "settlement_id": "SET-00073",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1219.54,
+      "actual_net": 1219.54
+    }
+  },
+  {
+    "payment_id": "PAY-00074",
+    "settlement_id": "SET-00074",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00074",
+      "candidate_bank_txn_ids": [
+        "BANK-00074"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 251.21,
+      "actual_net": 251.22
+    }
+  },
+  {
+    "payment_id": "PAY-00075",
+    "settlement_id": "SET-00075",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00075",
+      "candidate_bank_txn_ids": [
+        "BANK-00075"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3288.3,
+      "actual_net": 3288.3
+    }
+  },
+  {
+    "payment_id": "PAY-00076",
+    "settlement_id": "SET-00076",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00076",
+      "candidate_bank_txn_ids": [
+        "BANK-00076"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 61286.74,
+      "actual_net": 61286.73
+    }
+  },
+  {
+    "payment_id": "PAY-00077",
+    "settlement_id": "SET-00077",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00077",
+      "candidate_bank_txn_ids": [
+        "BANK-00077"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 35851.02,
+      "actual_net": 35851.02
+    }
+  },
+  {
+    "payment_id": "PAY-00078",
+    "settlement_id": "SET-00078",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00078",
+      "candidate_bank_txn_ids": [
+        "BANK-00078"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 172293.3,
+      "actual_net": 172293.3
+    }
+  },
+  {
+    "payment_id": "PAY-00079",
+    "settlement_id": "SET-00079",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00079"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "REFUND_NOT_REFLECTED",
+      "expected_net": 98.92,
+      "actual_net": 125.85
+    }
+  },
+  {
+    "payment_id": "PAY-00080",
+    "settlement_id": "SET-00080",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00080",
+      "candidate_bank_txn_ids": [
+        "BANK-00080"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1915.35,
+      "actual_net": 1915.35
+    }
+  },
+  {
+    "payment_id": "PAY-00081",
+    "settlement_id": "SET-00081",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00081",
+      "candidate_bank_txn_ids": [
+        "BANK-00081"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4753.37,
+      "actual_net": 4753.38
+    }
+  },
+  {
+    "payment_id": "PAY-00082",
+    "settlement_id": "SET-00082",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00082",
+      "candidate_bank_txn_ids": [
+        "BANK-00082"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3255.48,
+      "actual_net": 3255.47
+    }
+  },
+  {
+    "payment_id": "PAY-00083",
+    "settlement_id": "SET-00083",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00083",
+      "candidate_bank_txn_ids": [
+        "BANK-00083"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": "VALID_NEGATIVE_SETTLEMENT",
+      "expected_net": -85.43,
+      "actual_net": -85.43
+    }
+  },
+  {
+    "payment_id": "PAY-00084",
+    "settlement_id": "SET-00084",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00084",
+        "BANK-00084-DUP"
+      ],
+      "exception_type": "DUPLICATE_BANK_ENTRY",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4082.5,
+      "actual_net": 4082.49
+    }
+  },
+  {
+    "payment_id": "PAY-00085",
+    "settlement_id": "SET-00085",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00085"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "REFUND_NOT_REFLECTED",
+      "expected_net": 445.98,
+      "actual_net": 861.51
+    }
+  },
+  {
+    "payment_id": "PAY-00086",
+    "settlement_id": "SET-00086",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00086",
+      "candidate_bank_txn_ids": [
+        "BANK-00086"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 561.39,
+      "actual_net": 561.39
+    }
+  },
+  {
+    "payment_id": "PAY-00087",
+    "settlement_id": "SET-00087",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00087",
+      "candidate_bank_txn_ids": [
+        "BANK-00087"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1758.78,
+      "actual_net": 1758.79
+    }
+  },
+  {
+    "payment_id": "PAY-00088",
+    "settlement_id": "SET-00088",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00088",
+      "candidate_bank_txn_ids": [
+        "BANK-00088"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": "VALID_NEGATIVE_SETTLEMENT",
+      "expected_net": -453.16,
+      "actual_net": -453.16
+    }
+  },
+  {
+    "payment_id": "PAY-00089",
+    "settlement_id": "SET-00089",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00089",
+      "candidate_bank_txn_ids": [
+        "BANK-00089"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1242.27,
+      "actual_net": 1242.27
+    }
+  },
+  {
+    "payment_id": "PAY-00090",
+    "settlement_id": "SET-00090",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "NORMALIZED_IDENTIFIER",
+      "bank_txn_id": "BANK-00090",
+      "candidate_bank_txn_ids": [
+        "BANK-00090"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4401.72,
+      "actual_net": 4401.72
+    }
+  },
+  {
+    "payment_id": "PAY-00091",
+    "settlement_id": "SET-00091",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00091",
+      "candidate_bank_txn_ids": [
+        "BANK-00091"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": "VALID_NEGATIVE_SETTLEMENT",
+      "expected_net": -24.36,
+      "actual_net": -24.36
+    }
+  },
+  {
+    "payment_id": "PAY-00092",
+    "settlement_id": "SET-00092",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00092"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "FEE_MISMATCH",
+      "expected_net": 4473.16,
+      "actual_net": 4398.42
+    }
+  },
+  {
+    "payment_id": "PAY-00093",
+    "settlement_id": "SET-00093",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3848.92,
+      "actual_net": 3848.92
+    }
+  },
+  {
+    "payment_id": "PAY-00094",
+    "settlement_id": "SET-00094",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00094"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "FEE_MISMATCH",
+      "expected_net": 859.13,
+      "actual_net": 847.17
+    }
+  },
+  {
+    "payment_id": "PAY-00095",
+    "settlement_id": "SET-00095",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00095",
+      "candidate_bank_txn_ids": [
+        "BANK-00095"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2343.41,
+      "actual_net": 2343.41
+    }
+  },
+  {
+    "payment_id": "PAY-00096",
+    "settlement_id": "SET-00096",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00096",
+        "BANK-00096-DUP"
+      ],
+      "exception_type": "DUPLICATE_BANK_ENTRY",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": "VALID_NEGATIVE_SETTLEMENT",
+      "expected_net": -40.63,
+      "actual_net": -40.62
+    }
+  },
+  {
+    "payment_id": "PAY-00097",
+    "settlement_id": "SET-00097",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00097",
+      "candidate_bank_txn_ids": [
+        "BANK-00097"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1639.4,
+      "actual_net": 1639.4
+    }
+  },
+  {
+    "payment_id": "PAY-00098",
+    "settlement_id": "SET-00098",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00098",
+      "candidate_bank_txn_ids": [
+        "BANK-00098"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 77257.27,
+      "actual_net": 77257.27
+    }
+  },
+  {
+    "payment_id": "PAY-00099",
+    "settlement_id": "SET-00099",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00099"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 267.96,
+      "actual_net": 267.95
+    }
+  },
+  {
+    "payment_id": "PAY-00100",
+    "settlement_id": "SET-00100",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00100",
+      "candidate_bank_txn_ids": [
+        "BANK-00100"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "MISSING_PAYMENT_RECORD",
+      "expected_net": null,
+      "actual_net": null
+    }
+  },
+  {
+    "payment_id": "PAY-00101",
+    "settlement_id": "SET-00101",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00101",
+      "candidate_bank_txn_ids": [
+        "BANK-00101"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1260.23,
+      "actual_net": 1260.23
+    }
+  },
+  {
+    "payment_id": "PAY-00102",
+    "settlement_id": "SET-00102",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00102",
+      "candidate_bank_txn_ids": [
+        "BANK-00102"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 711.92,
+      "actual_net": 711.91
+    }
+  },
+  {
+    "payment_id": "PAY-00103",
+    "settlement_id": "SET-00103",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00103",
+      "candidate_bank_txn_ids": [
+        "BANK-00103"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2880.01,
+      "actual_net": 2880.01
+    }
+  },
+  {
+    "payment_id": "PAY-00104",
+    "settlement_id": "SET-00104",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00104",
+      "candidate_bank_txn_ids": [
+        "BANK-00104"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "MISSING_PAYMENT_RECORD",
+      "expected_net": null,
+      "actual_net": null
+    }
+  },
+  {
+    "payment_id": "PAY-00105",
+    "settlement_id": "SET-00105",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00105",
+      "candidate_bank_txn_ids": [
+        "BANK-00105"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3822.86,
+      "actual_net": 3822.87
+    }
+  },
+  {
+    "payment_id": "PAY-00106",
+    "settlement_id": "SET-00106",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00106",
+      "candidate_bank_txn_ids": [
+        "BANK-00106"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 149958.08,
+      "actual_net": 149958.08
+    }
+  },
+  {
+    "payment_id": "PAY-00107",
+    "settlement_id": "SET-00107",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00107",
+      "candidate_bank_txn_ids": [
+        "BANK-00107"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4496.32,
+      "actual_net": 4496.32
+    }
+  },
+  {
+    "payment_id": "PAY-00108",
+    "settlement_id": "SET-00108",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00108",
+      "candidate_bank_txn_ids": [
+        "BANK-00108"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3538.9,
+      "actual_net": 3538.9
+    }
+  },
+  {
+    "payment_id": "PAY-00109",
+    "settlement_id": "SET-00109",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00109",
+      "candidate_bank_txn_ids": [
+        "BANK-00109"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1537.49,
+      "actual_net": 1537.49
+    }
+  },
+  {
+    "payment_id": "PAY-00110",
+    "settlement_id": "SET-00110",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00110"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4218.65,
+      "actual_net": 4218.64
+    }
+  },
+  {
+    "payment_id": "PAY-00111",
+    "settlement_id": "SET-00111",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4525.92,
+      "actual_net": 4525.93
+    }
+  },
+  {
+    "payment_id": "PAY-00112",
+    "settlement_id": "SET-00112",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3135.6,
+      "actual_net": 3135.6
+    }
+  },
+  {
+    "payment_id": "PAY-00113",
+    "settlement_id": "SET-00113",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00113",
+      "candidate_bank_txn_ids": [
+        "BANK-00113"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3206.92,
+      "actual_net": 3206.92
+    }
+  },
+  {
+    "payment_id": "PAY-00114",
+    "settlement_id": "SET-00114",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00114",
+      "candidate_bank_txn_ids": [
+        "BANK-00114"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3964.36,
+      "actual_net": 3964.36
+    }
+  },
+  {
+    "payment_id": "PAY-00115",
+    "settlement_id": "SET-00115",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00115",
+      "candidate_bank_txn_ids": [
+        "BANK-00115"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1277.59,
+      "actual_net": 1277.59
+    }
+  },
+  {
+    "payment_id": "PAY-00116",
+    "settlement_id": "SET-00116",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00116",
+      "candidate_bank_txn_ids": [
+        "BANK-00116"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 921.43,
+      "actual_net": 921.43
+    }
+  },
+  {
+    "payment_id": "PAY-00117",
+    "settlement_id": "SET-00117",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00117",
+      "candidate_bank_txn_ids": [
+        "BANK-00117"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "MISSING_PAYMENT_RECORD",
+      "expected_net": null,
+      "actual_net": null
+    }
+  },
+  {
+    "payment_id": "PAY-00118",
+    "settlement_id": "SET-00118",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00118",
+      "candidate_bank_txn_ids": [
+        "BANK-00118"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4541.77,
+      "actual_net": 4541.77
+    }
+  },
+  {
+    "payment_id": "PAY-00119",
+    "settlement_id": "SET-00119",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00119",
+      "candidate_bank_txn_ids": [
+        "BANK-00119"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4090.65,
+      "actual_net": 4090.65
+    }
+  },
+  {
+    "payment_id": "PAY-00120",
+    "settlement_id": "SET-00120",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00120",
+      "candidate_bank_txn_ids": [
+        "BANK-00120"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 900.41,
+      "actual_net": 900.41
+    }
+  },
+  {
+    "payment_id": "PAY-00121",
+    "settlement_id": "SET-00121",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00121",
+      "candidate_bank_txn_ids": [
+        "BANK-00121"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4065.81,
+      "actual_net": 4065.81
+    }
+  },
+  {
+    "payment_id": "PAY-00122",
+    "settlement_id": "SET-00122",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00122",
+      "candidate_bank_txn_ids": [
+        "BANK-00122"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2622.22,
+      "actual_net": 2622.22
+    }
+  },
+  {
+    "payment_id": "PAY-00123",
+    "settlement_id": "SET-00123",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00123",
+      "candidate_bank_txn_ids": [
+        "BANK-00123"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1938.5,
+      "actual_net": 1938.51
+    }
+  },
+  {
+    "payment_id": "PAY-00124",
+    "settlement_id": "SET-00124",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00124",
+      "candidate_bank_txn_ids": [
+        "BANK-00124"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3786.95,
+      "actual_net": 3786.95
+    }
+  },
+  {
+    "payment_id": "PAY-00125",
+    "settlement_id": "SET-00125",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00125",
+      "candidate_bank_txn_ids": [
+        "BANK-00125"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 32002.42,
+      "actual_net": 32002.41
+    }
+  },
+  {
+    "payment_id": "PAY-00126",
+    "settlement_id": "SET-00126",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00126",
+      "candidate_bank_txn_ids": [
+        "BANK-00126"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 32883.89,
+      "actual_net": 32883.89
+    }
+  },
+  {
+    "payment_id": "PAY-00127",
+    "settlement_id": "SET-00127",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00127",
+        "BANK-00127-DUP"
+      ],
+      "exception_type": "DUPLICATE_BANK_ENTRY",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4820.92,
+      "actual_net": 4820.92
+    }
+  },
+  {
+    "payment_id": "PAY-00128",
+    "settlement_id": "SET-00128",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00128",
+      "candidate_bank_txn_ids": [
+        "BANK-00128"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 701.52,
+      "actual_net": 701.52
+    }
+  },
+  {
+    "payment_id": "PAY-00129",
+    "settlement_id": "SET-00129",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00129",
+      "candidate_bank_txn_ids": [
+        "BANK-00129"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": "VALID_NEGATIVE_SETTLEMENT",
+      "expected_net": -49.97,
+      "actual_net": -49.97
+    }
+  },
+  {
+    "payment_id": "PAY-00130",
+    "settlement_id": "SET-00130",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00130",
+      "candidate_bank_txn_ids": [
+        "BANK-00130"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 432.42,
+      "actual_net": 432.42
+    }
+  },
+  {
+    "payment_id": "PAY-00131",
+    "settlement_id": "SET-00131",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00131",
+      "candidate_bank_txn_ids": [
+        "BANK-00131"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1958.07,
+      "actual_net": 1958.07
+    }
+  },
+  {
+    "payment_id": "PAY-00132",
+    "settlement_id": "SET-00132",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00132",
+      "candidate_bank_txn_ids": [
+        "BANK-00132"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 863.05,
+      "actual_net": 863.05
+    }
+  },
+  {
+    "payment_id": "PAY-00133",
+    "settlement_id": "SET-00133",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00133",
+      "candidate_bank_txn_ids": [
+        "BANK-00133"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1980.6,
+      "actual_net": 1980.6
+    }
+  },
+  {
+    "payment_id": "PAY-00134",
+    "settlement_id": "SET-00134",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00134",
+      "candidate_bank_txn_ids": [
+        "BANK-00134"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2534.82,
+      "actual_net": 2534.82
+    }
+  },
+  {
+    "payment_id": "PAY-00135",
+    "settlement_id": "SET-00135",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00135",
+      "candidate_bank_txn_ids": [
+        "BANK-00135"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3621.19,
+      "actual_net": 3621.18
+    }
+  },
+  {
+    "payment_id": "PAY-00136",
+    "settlement_id": "SET-00136",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00136"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1455.37,
+      "actual_net": 1455.37
+    }
+  },
+  {
+    "payment_id": "PAY-00137",
+    "settlement_id": "SET-00137",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00137",
+      "candidate_bank_txn_ids": [
+        "BANK-00137"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 3.72,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "TAX_MISMATCH",
+      "expected_net": 1738.1,
+      "actual_net": 1734.38
+    }
+  },
+  {
+    "payment_id": "PAY-00138",
+    "settlement_id": "SET-00138",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00138",
+      "candidate_bank_txn_ids": [
+        "BANK-00138"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3455.4,
+      "actual_net": 3455.4
+    }
+  },
+  {
+    "payment_id": "PAY-00139",
+    "settlement_id": "SET-00139",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00139",
+      "candidate_bank_txn_ids": [
+        "BANK-00139"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2006.56,
+      "actual_net": 2006.56
+    }
+  },
+  {
+    "payment_id": "PAY-00140",
+    "settlement_id": "SET-00140",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00140",
+      "candidate_bank_txn_ids": [
+        "BANK-00140"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "MISSING_PAYMENT_RECORD",
+      "expected_net": null,
+      "actual_net": null
+    }
+  },
+  {
+    "payment_id": "PAY-00141",
+    "settlement_id": "SET-00141",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00141",
+      "candidate_bank_txn_ids": [
+        "BANK-00141"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4062.48,
+      "actual_net": 4062.48
+    }
+  },
+  {
+    "payment_id": "PAY-00142",
+    "settlement_id": "SET-00142",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00142",
+      "candidate_bank_txn_ids": [
+        "BANK-00142"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1157.83,
+      "actual_net": 1157.83
+    }
+  },
+  {
+    "payment_id": "PAY-00143",
+    "settlement_id": "SET-00143",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00143",
+      "candidate_bank_txn_ids": [
+        "BANK-00143"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1140.47,
+      "actual_net": 1140.46
+    }
+  },
+  {
+    "payment_id": "PAY-00144",
+    "settlement_id": "SET-00144",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00144",
+      "candidate_bank_txn_ids": [
+        "BANK-00144"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4086.57,
+      "actual_net": 4086.58
+    }
+  },
+  {
+    "payment_id": "PAY-00145",
+    "settlement_id": "SET-00145",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00145",
+      "candidate_bank_txn_ids": [
+        "BANK-00145"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2211.54,
+      "actual_net": 2211.54
+    }
+  },
+  {
+    "payment_id": "PAY-00146",
+    "settlement_id": "SET-00146",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00146",
+      "candidate_bank_txn_ids": [
+        "BANK-00146"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 4.97,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "FEE_MISMATCH",
+      "expected_net": 3724.98,
+      "actual_net": 3720.01
+    }
+  },
+  {
+    "payment_id": "PAY-00147",
+    "settlement_id": "SET-00147",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00147",
+      "candidate_bank_txn_ids": [
+        "BANK-00147"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2332.05,
+      "actual_net": 2332.05
+    }
+  },
+  {
+    "payment_id": "PAY-00148",
+    "settlement_id": "SET-00148",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00148",
+      "candidate_bank_txn_ids": [
+        "BANK-00148"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1911.6,
+      "actual_net": 1911.61
+    }
+  },
+  {
+    "payment_id": "PAY-00149",
+    "settlement_id": "SET-00149",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00149",
+      "candidate_bank_txn_ids": [
+        "BANK-00149"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 947.87,
+      "actual_net": 947.88
+    }
+  },
+  {
+    "payment_id": "PAY-00150",
+    "settlement_id": "SET-00150",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00150",
+        "BANK-00150-DUP"
+      ],
+      "exception_type": "DUPLICATE_BANK_ENTRY",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 9601.27,
+      "actual_net": 9601.27
+    }
+  },
+  {
+    "payment_id": "PAY-00151",
+    "settlement_id": "SET-00151",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00151"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "TAX_MISMATCH",
+      "expected_net": 21182.54,
+      "actual_net": 21124.19
+    }
+  },
+  {
+    "payment_id": "PAY-00152",
+    "settlement_id": "SET-00152",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00152",
+      "candidate_bank_txn_ids": [
+        "BANK-00152"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": "VALID_NEGATIVE_SETTLEMENT",
+      "expected_net": -95.7,
+      "actual_net": -95.7
+    }
+  },
+  {
+    "payment_id": "PAY-00153",
+    "settlement_id": "SET-00153",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00153"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "FEE_MISMATCH",
+      "expected_net": -9.12,
+      "actual_net": -15.54
+    }
+  },
+  {
+    "payment_id": "PAY-00154",
+    "settlement_id": "SET-00154",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00154",
+      "candidate_bank_txn_ids": [
+        "BANK-00154"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2133.4,
+      "actual_net": 2133.4
+    }
+  },
+  {
+    "payment_id": "PAY-00155",
+    "settlement_id": "SET-00155",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00155",
+      "candidate_bank_txn_ids": [
+        "BANK-00155"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 828.87,
+      "actual_net": 828.88
+    }
+  },
+  {
+    "payment_id": "PAY-00156",
+    "settlement_id": "SET-00156",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00156",
+      "candidate_bank_txn_ids": [
+        "BANK-00156"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2661.41,
+      "actual_net": 2661.4
+    }
+  },
+  {
+    "payment_id": "PAY-00157",
+    "settlement_id": "SET-00157",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00157",
+      "candidate_bank_txn_ids": [
+        "BANK-00157"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 181745.27,
+      "actual_net": 181745.27
+    }
+  },
+  {
+    "payment_id": "PAY-00158",
+    "settlement_id": "SET-00158",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00158",
+        "BANK-00158-DUP"
+      ],
+      "exception_type": "DUPLICATE_BANK_ENTRY",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 429.78,
+      "actual_net": 429.77
+    }
+  },
+  {
+    "payment_id": "PAY-00159",
+    "settlement_id": "SET-00159",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00159",
+      "candidate_bank_txn_ids": [
+        "BANK-00159"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "REFUND_NOT_REFLECTED",
+      "expected_net": -162.14,
+      "actual_net": -27.26
+    }
+  },
+  {
+    "payment_id": "PAY-00160",
+    "settlement_id": "SET-00160",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2254.44,
+      "actual_net": 2254.44
+    }
+  },
+  {
+    "payment_id": "PAY-00161",
+    "settlement_id": "SET-00161",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00161"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "FEE_MISMATCH",
+      "expected_net": 30132.14,
+      "actual_net": 29369.88
+    }
+  },
+  {
+    "payment_id": "PAY-00162",
+    "settlement_id": "SET-00162",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2916.89,
+      "actual_net": 2916.9
+    }
+  },
+  {
+    "payment_id": "PAY-00163",
+    "settlement_id": "SET-00163",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2445.9,
+      "actual_net": 2445.9
+    }
+  },
+  {
+    "payment_id": "PAY-00164",
+    "settlement_id": "SET-00164",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00164",
+      "candidate_bank_txn_ids": [
+        "BANK-00164"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2543.27,
+      "actual_net": 2543.28
+    }
+  },
+  {
+    "payment_id": "PAY-00165",
+    "settlement_id": "SET-00165",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00165",
+      "candidate_bank_txn_ids": [
+        "BANK-00165"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 190749.68,
+      "actual_net": 190749.68
+    }
+  },
+  {
+    "payment_id": "PAY-00166",
+    "settlement_id": "SET-00166",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00166",
+      "candidate_bank_txn_ids": [
+        "BANK-00166"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": "VALID_NEGATIVE_SETTLEMENT",
+      "expected_net": -27.67,
+      "actual_net": -27.67
+    }
+  },
+  {
+    "payment_id": "PAY-00167",
+    "settlement_id": "SET-00167",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00167",
+      "candidate_bank_txn_ids": [
+        "BANK-00167"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4677.79,
+      "actual_net": 4677.8
+    }
+  },
+  {
+    "payment_id": "PAY-00168",
+    "settlement_id": "SET-00168",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00168",
+        "BANK-00168-DUP"
+      ],
+      "exception_type": "DUPLICATE_BANK_ENTRY",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1103.23,
+      "actual_net": 1103.23
+    }
+  },
+  {
+    "payment_id": "PAY-00169",
+    "settlement_id": "SET-00169",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00169",
+      "candidate_bank_txn_ids": [
+        "BANK-00169"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3612.4,
+      "actual_net": 3612.4
+    }
+  },
+  {
+    "payment_id": "PAY-00170",
+    "settlement_id": "SET-00170",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00170",
+      "candidate_bank_txn_ids": [
+        "BANK-00170"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4878.56,
+      "actual_net": 4878.56
+    }
+  },
+  {
+    "payment_id": "PAY-00171",
+    "settlement_id": "SET-00171",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00171",
+      "candidate_bank_txn_ids": [
+        "BANK-00171"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 889.58,
+      "actual_net": 889.58
+    }
+  },
+  {
+    "payment_id": "PAY-00172",
+    "settlement_id": "SET-00172",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00172",
+      "candidate_bank_txn_ids": [
+        "BANK-00172"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 156462.09,
+      "actual_net": 156462.1
+    }
+  },
+  {
+    "payment_id": "PAY-00173",
+    "settlement_id": "SET-00173",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00173",
+      "candidate_bank_txn_ids": [
+        "BANK-00173"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1720.99,
+      "actual_net": 1720.98
+    }
+  },
+  {
+    "payment_id": "PAY-00174",
+    "settlement_id": "SET-00174",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00174",
+      "candidate_bank_txn_ids": [
+        "BANK-00174"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3713.57,
+      "actual_net": 3713.57
+    }
+  },
+  {
+    "payment_id": "PAY-00175",
+    "settlement_id": "SET-00175",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00175",
+      "candidate_bank_txn_ids": [
+        "BANK-00175"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": "VALID_NEGATIVE_SETTLEMENT",
+      "expected_net": -61.09,
+      "actual_net": -61.09
+    }
+  },
+  {
+    "payment_id": "PAY-00176",
+    "settlement_id": "SET-00176",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4811.3,
+      "actual_net": 4811.3
+    }
+  },
+  {
+    "payment_id": "PAY-00177",
+    "settlement_id": "SET-00177",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00177"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 422.79,
+      "actual_net": 422.79
+    }
+  },
+  {
+    "payment_id": "PAY-00178",
+    "settlement_id": "SET-00178",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00178",
+      "candidate_bank_txn_ids": [
+        "BANK-00178"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 61076.23,
+      "actual_net": 61076.23
+    }
+  },
+  {
+    "payment_id": "PAY-00179",
+    "settlement_id": "SET-00179",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00179",
+      "candidate_bank_txn_ids": [
+        "BANK-00179"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2776.32,
+      "actual_net": 2776.33
+    }
+  },
+  {
+    "payment_id": "PAY-00180",
+    "settlement_id": "SET-00180",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00180",
+      "candidate_bank_txn_ids": [
+        "BANK-00180"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 168708.16,
+      "actual_net": 168708.16
+    }
+  },
+  {
+    "payment_id": "PAY-00181",
+    "settlement_id": "SET-00181",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00181",
+      "candidate_bank_txn_ids": [
+        "BANK-00181"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 109195.72,
+      "actual_net": 109195.72
+    }
+  },
+  {
+    "payment_id": "PAY-00182",
+    "settlement_id": "SET-00182",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00182",
+      "candidate_bank_txn_ids": [
+        "BANK-00182"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 229.69,
+      "actual_net": 229.69
+    }
+  },
+  {
+    "payment_id": "PAY-00183",
+    "settlement_id": "SET-00183",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00183"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "FEE_MISMATCH",
+      "expected_net": -274.58,
+      "actual_net": -280.98
+    }
+  },
+  {
+    "payment_id": "PAY-00184",
+    "settlement_id": "SET-00184",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00184",
+      "candidate_bank_txn_ids": [
+        "BANK-00184"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 8600.85,
+      "actual_net": 8600.84
+    }
+  },
+  {
+    "payment_id": "PAY-00185",
+    "settlement_id": "SET-00185",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00185",
+        "BANK-00185-DUP"
+      ],
+      "exception_type": "DUPLICATE_BANK_ENTRY",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 2894.51,
+      "actual_net": 2894.51
+    }
+  },
+  {
+    "payment_id": "PAY-00186",
+    "settlement_id": "SET-00186",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1272.18,
+      "actual_net": 1272.18
+    }
+  },
+  {
+    "payment_id": "PAY-00187",
+    "settlement_id": "SET-00187",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00187",
+        "BANK-00187-DUP"
+      ],
+      "exception_type": "DUPLICATE_BANK_ENTRY",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1747.41,
+      "actual_net": 1747.41
+    }
+  },
+  {
+    "payment_id": "PAY-00188",
+    "settlement_id": "SET-00188",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00188",
+      "candidate_bank_txn_ids": [
+        "BANK-00188"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4118.92,
+      "actual_net": 4118.92
+    }
+  },
+  {
+    "payment_id": "PAY-00189",
+    "settlement_id": "SET-00189",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00189",
+      "candidate_bank_txn_ids": [
+        "BANK-00189"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 147581.04,
+      "actual_net": 147581.03
+    }
+  },
+  {
+    "payment_id": "PAY-00190",
+    "settlement_id": "SET-00190",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00190",
+      "candidate_bank_txn_ids": [
+        "BANK-00190"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "FAIL",
+      "exception_type": "REFUND_NOT_REFLECTED",
+      "expected_net": 103958.67,
+      "actual_net": 106578.07
+    }
+  },
+  {
+    "payment_id": "PAY-00191",
+    "settlement_id": "SET-00191",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00191",
+      "candidate_bank_txn_ids": [
+        "BANK-00191"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1913.09,
+      "actual_net": 1913.09
+    }
+  },
+  {
+    "payment_id": "PAY-00192",
+    "settlement_id": "SET-00192",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00192",
+      "candidate_bank_txn_ids": [
+        "BANK-00192"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4298.36,
+      "actual_net": 4298.36
+    }
+  },
+  {
+    "payment_id": "PAY-00193",
+    "settlement_id": "SET-00193",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00193",
+      "candidate_bank_txn_ids": [
+        "BANK-00193"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 632.89,
+      "actual_net": 632.88
+    }
+  },
+  {
+    "payment_id": "PAY-00194",
+    "settlement_id": "SET-00194",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 544.44,
+      "actual_net": 544.44
+    }
+  },
+  {
+    "payment_id": "PAY-00195",
+    "settlement_id": "SET-00195",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00195",
+      "candidate_bank_txn_ids": [
+        "BANK-00195"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 24976.39,
+      "actual_net": 24976.39
+    }
+  },
+  {
+    "payment_id": "PAY-00196",
+    "settlement_id": "SET-00196",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "CONSTRAINED",
+      "bank_txn_id": "BANK-00196",
+      "candidate_bank_txn_ids": [
+        "BANK-00196"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 4180.83,
+      "actual_net": 4180.84
+    }
+  },
+  {
+    "payment_id": "PAY-00197",
+    "settlement_id": "SET-00197",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00197",
+      "candidate_bank_txn_ids": [
+        "BANK-00197"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 118254.93,
+      "actual_net": 118254.93
+    }
+  },
+  {
+    "payment_id": "PAY-00198",
+    "settlement_id": "SET-00198",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [
+        "BANK-00198"
+      ],
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 343.44,
+      "actual_net": 343.45
+    }
+  },
+  {
+    "payment_id": "PAY-00199",
+    "settlement_id": "SET-00199",
+    "bank_match": {
+      "status": "EXCEPTION",
+      "method": "NONE",
+      "bank_txn_id": null,
+      "candidate_bank_txn_ids": [],
+      "exception_type": "MISSING_BANK_ENTRY",
+      "evidence": {
+        "utr_match": false,
+        "amount_difference": null,
+        "date_difference_days": null
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 1107.06,
+      "actual_net": 1107.06
+    }
+  },
+  {
+    "payment_id": "PAY-00200",
+    "settlement_id": "SET-00200",
+    "bank_match": {
+      "status": "MATCHED",
+      "method": "EXACT",
+      "bank_txn_id": "BANK-00200",
+      "candidate_bank_txn_ids": [
+        "BANK-00200"
+      ],
+      "exception_type": null,
+      "evidence": {
+        "utr_match": true,
+        "amount_difference": 0.0,
+        "date_difference_days": 0
+      }
+    },
+    "lifecycle_check": {
+      "status": "PASS",
+      "exception_type": null,
+      "expected_net": 3608.39,
+      "actual_net": 3608.38
+    }
+  }
+]

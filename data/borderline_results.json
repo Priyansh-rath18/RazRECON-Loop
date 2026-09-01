@@ -1,0 +1,156 @@
+[
+  {
+    "payment_id": "PAY-00136",
+    "agent_investigation": {
+      "root_cause": "AMOUNT_MISMATCH",
+      "explanation": "The settlement record (SET-00136) specifies a net_amount of 1455.37, calculated as 1490.55 (gross) - 29.81 (fee) - 5.37 (tax) = 1455.37. However, the associated bank entry (BANK-00136), linked via UTR519246503, shows a credit_amount of 1458.29. The difference is 2.92 (1458.29 - 1455.37 = 2.92). This discrepancy indicates that the actual amount deposited into the bank does not match the net amount calculated in the settlement record.",
+      "evidence": {
+        "records_examined": [
+          "ORD-00123",
+          "PAY-00136",
+          "SET-00136",
+          "BANK-00136"
+        ],
+        "calculation": "Expected net = 1490.55 (Gross) - 29.81 (Fee) - 5.37 (Tax) = 1455.37. Actual bank credit = 1458.29. Difference = 1458.29 - 1455.37 = 2.92.",
+        "key_findings": [
+          "The UTR matches between the settlement and bank entry.",
+          "The calculated net amount (1455.37) does not reconcile with the bank credit amount (1458.29).",
+          "There is no explanation for the additional 2.92 in the bank entry."
+        ]
+      },
+      "confidence": 0.95,
+      "recommended_action": "ESCALATE",
+      "action_reason": "The financial mismatch of 2.92 between the system settlement record and the bank entry requires manual investigation by the finance team to determine if there was an incorrect fee/tax calculation or an external adjustment."
+    },
+    "policy_decision": {
+      "final_action": "ESCALATE",
+      "policy_reason": "The financial mismatch of 2.92 between the system settlement record and the bank entry requires manual investigation by the finance team to determine if there was an incorrect fee/tax calculation or an external adjustment."
+    },
+    "execution": {
+      "action_taken": "ESCALATED",
+      "store": "data/escalation_queue.json",
+      "record": {
+        "payment_id": "PAY-00136",
+        "escalated_at": "2026-08-31T16:19:26.319537",
+        "root_cause": "AMOUNT_MISMATCH",
+        "reason": "The financial mismatch of 2.92 between the system settlement record and the bank entry requires manual investigation by the finance team to determine if there was an incorrect fee/tax calculation or an external adjustment.",
+        "amount_at_risk": 1490.55,
+        "priority": "LOW"
+      }
+    },
+    "verification": {
+      "verified": true,
+      "verification_method": "EVIDENCE_COMPLETENESS_CHECK",
+      "notes": "All required evidence fields present.",
+      "corrected": false
+    },
+    "priority": {
+      "priority": "MEDIUM",
+      "priority_score": 2,
+      "priority_reasoning": "No significant risk factors identified."
+    }
+  },
+  {
+    "payment_id": "PAY-00146",
+    "agent_investigation": {
+      "root_cause": "AMOUNT_MISMATCH",
+      "explanation": "The financial lifecycle shows a payment of \u20b93,815.01. Settlement calculations account for a fee of \u20b981.27 and tax of \u20b913.73. Expected net = \u20b93,815.01 - \u20b981.27 - \u20b913.73 = \u20b93,720.01. The recorded settlement amount (SET-00146) is correctly calculated as \u20b93,720.01. However, the bank entry (BANK-00146) reflects a credit of \u20b93,724.98. The difference between the bank credit and the settlement net is \u20b94.97 (\u20b93,724.98 - \u20b93,720.01). The deterministic engine flagged this as a 'FEE_MISMATCH' based on an assumption of what the net should be, but the settlement records internal to the system are mathematically consistent; the discrepancy lies in the actual cash received in the bank account relative to the calculated settlement.",
+      "evidence": {
+        "records_examined": [
+          "PAY-00146",
+          "SET-00146",
+          "BANK-00146"
+        ],
+        "calculation": "Expected settlement net: 3815.01 (Gross) - 81.27 (Fee) - 13.73 (Tax) = 3720.01. Observed bank credit: 3724.98. Variance: 3724.98 - 3720.01 = 4.97.",
+        "key_findings": [
+          "Settlement calculation is internally consistent at 3720.01.",
+          "Bank credit of 3724.98 exceeds the expected settlement amount by 4.97.",
+          "The UTR matches between settlement and bank, confirming the records refer to the same transaction flow."
+        ]
+      },
+      "confidence": 0.95,
+      "recommended_action": "ESCALATE",
+      "action_reason": "The system records are internally consistent, but the bank has credited an amount 4.97 higher than the reconciled settlement. Human verification of bank statement details or reconciliation adjustment is required as this indicates an imbalance between processed settlements and actual banking cash movement."
+    },
+    "policy_decision": {
+      "final_action": "ESCALATE",
+      "policy_reason": "The system records are internally consistent, but the bank has credited an amount 4.97 higher than the reconciled settlement. Human verification of bank statement details or reconciliation adjustment is required as this indicates an imbalance between processed settlements and actual banking cash movement."
+    },
+    "execution": {
+      "action_taken": "ESCALATED",
+      "store": "data/escalation_queue.json",
+      "record": {
+        "payment_id": "PAY-00146",
+        "escalated_at": "2026-08-31T16:19:32.151023",
+        "root_cause": "AMOUNT_MISMATCH",
+        "reason": "The system records are internally consistent, but the bank has credited an amount 4.97 higher than the reconciled settlement. Human verification of bank statement details or reconciliation adjustment is required as this indicates an imbalance between processed settlements and actual banking cash movement.",
+        "amount_at_risk": 3815.01,
+        "priority": "LOW"
+      }
+    },
+    "verification": {
+      "verified": true,
+      "verification_method": "EVIDENCE_COMPLETENESS_CHECK",
+      "notes": "All required evidence fields present.",
+      "corrected": false
+    },
+    "priority": {
+      "priority": "MEDIUM",
+      "priority_score": 2,
+      "priority_reasoning": "No significant risk factors identified."
+    }
+  },
+  {
+    "payment_id": "PAY-00190",
+    "agent_investigation": {
+      "root_cause": "REFUND_TIMING_CONFLICT",
+      "explanation": "The deterministic system flagged a 'REFUND_NOT_REFLECTED' error because it expected the net amount to include the refund. However, a chronological review shows the settlement occurred on 2026-08-31 18:36:27, whereas the refund (REF-BORDERLINE-PAY-00190) was processed on 2026-09-01 14:21:27. Because the refund occurred after the settlement, it could not have been included in the settlement calculation (SET-00190). Calculation: Gross (109154.11) - Fee (2183.08) - Tax (392.95) = 106578.07, which matches the settlement net and bank entry exactly.",
+      "evidence": {
+        "records_examined": [
+          "order",
+          "payment",
+          "refunds",
+          "settlement",
+          "bank_entries"
+        ],
+        "calculation": "Expected settlement at time of processing: 109154.11 (Payment) - 2183.08 (Fee) - 392.95 (Tax) = 106578.07. Actual settlement: 106578.07. Difference: 0.00.",
+        "key_findings": [
+          "Settlement (SET-00190) occurred on 2026-08-31.",
+          "Refund (REF-BORDERLINE-PAY-00190) occurred on 2026-09-01.",
+          "The bank entry and settlement match perfectly, validating the financial state at the time of settlement.",
+          "The refund is a post-settlement event, not a failure to reconcile the initial payment."
+        ]
+      },
+      "confidence": 1.0,
+      "recommended_action": "RESOLVE",
+      "action_reason": "The discrepancy is a timing difference. The settlement is accurate for the date it occurred, and the refund is a valid subsequent event."
+    },
+    "policy_decision": {
+      "final_action": "ESCALATE",
+      "policy_reason": "Amount at risk (\u20b9109,154.11) exceeds materiality threshold (\u20b950,000.00); escalating regardless of agent recommendation."
+    },
+    "execution": {
+      "action_taken": "ESCALATED",
+      "store": "data/escalation_queue.json",
+      "record": {
+        "payment_id": "PAY-00190",
+        "escalated_at": "2026-08-31T16:19:38.147734",
+        "root_cause": "REFUND_TIMING_CONFLICT",
+        "reason": "Amount at risk (\u20b9109,154.11) exceeds materiality threshold (\u20b950,000.00); escalating regardless of agent recommendation.",
+        "amount_at_risk": 109154.11,
+        "priority": "HIGH"
+      }
+    },
+    "verification": {
+      "verified": true,
+      "verification_method": "EVIDENCE_COMPLETENESS_CHECK",
+      "notes": "All required evidence fields present.",
+      "corrected": false
+    },
+    "priority": {
+      "priority": "HIGH",
+      "priority_score": 5,
+      "priority_reasoning": "high financial exposure (\u20b9109,154.11)"
+    }
+  }
+]

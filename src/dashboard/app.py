@@ -365,9 +365,14 @@ with tab_a:
         action_counts.columns = ["Action", "Count"]
         st.markdown("**Action Distribution**")
         st.bar_chart(action_counts.set_index("Action"))
-        if action_counts.set_index("Action").loc["REVIEW", "Count"] == 0:
+        review_row_count = action_counts.set_index("Action").loc["REVIEW", "Count"]
+        if review_row_count == 0:
             st.caption("REVIEW is an implemented outcome (RESOLVE recommended at 0.75–0.89 confidence). "
-                        "No real case landed there — the capability is verified separately in Tab D.")
+                        "No real case landed there in this run — the capability is verified separately in Tab D.")
+        else:
+            st.caption(f"REVIEW fired organically on {review_row_count} real case(s) in this run — "
+                        f"confirming the policy engine's confidence-gated middle tier works in practice, "
+                        f"not just in constructed scenarios.")
 
     with col_b:
         priority_order_list = ["CRITICAL", "HIGH", "MEDIUM", "LOW"]

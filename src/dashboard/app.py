@@ -13,6 +13,7 @@ from src.agent.triage import triage_exceptions
 from src.agent.policy import apply_policy
 from src.agent.priority import calculate_priority
 from src.agent.qa_agent import answer_question
+from src.agent.optimizer import optimize_resolution_order
 
 st.set_page_config(page_title="AI Finance Controller", layout="wide")
 
@@ -353,6 +354,36 @@ def render_qa_agent(audit_trail):
         st.info(result["answer"])
         st.caption(f"Grounded in: {', '.join(result['cases_used'])}")
 
+def render_resolution_optimizer(audit_trail):
+    st.subheader("🎯 Resolution Optimizer")
+    st.caption(
+        "Given limited review capacity, this ranks cases to resolve first for "
+        "maximum cash-risk reduction — compliance-critical cases (REJECT_ACTION) "
+        "are always prioritized regardless of amount."
+    )
+
+    total_uncertainty = sum(
+        r["amount_at_risk"] for r in audit_trail
+        if r["policy_decision"]["final_action"] in ("ESCALATE", "REVIEW", "REJECT_ACTION")
+    )
+
+    capacity = st.slider("Cases you can review today:", min_value=1, max_value=30, value=5)
+
+    result = optimize_resolution_order(audit_trail, total_uncertainty, capacity)
+
+    st.markdown(
+        f"**Reviewing these {len(result['plan'])} cases resolves "
+        f"{result['total_reduction_pct']}% of total unresolved cash uncertainty** "
+        f"(₹{result['original_uncertainty']:,.0f} → ₹{result['remaining_uncertainty']:,.0f} remaining)"
+    )
+
+    for i, p in enumerate(result["plan"], start=1):
+        note = f" · ⚠️ {p['note']}" if p["note"] else ""
+        st.markdown(
+            f"**{i}. {p['case_id']}** ({p['payment_id']}) · ₹{p['amount_at_risk']:,.2f} · "
+            f"{p['root_cause']} · {p['final_action']} · cumulative: {p['cumulative_reduction_pct']}%{note}"
+        )
+
 # ============================================================
 # TAB A — EXECUTIVE OVERVIEW
 # ============================================================
@@ -457,6 +488,8 @@ with tab_a:
         st.markdown(f"- `{c['payment_id']}`: ₹{c['amount_at_risk']:,.2f}")
     st.divider()
     render_pattern_clusters()
+    st.divider()
+    render_resolution_optimizer(audit_trail)
 
 # ============================================================
 # TAB B — EXCEPTION OPERATIONS

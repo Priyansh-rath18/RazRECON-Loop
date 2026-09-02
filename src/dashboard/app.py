@@ -15,7 +15,7 @@ from src.agent.priority import calculate_priority
 from src.agent.qa_agent import answer_question
 from src.agent.optimizer import optimize_resolution_order
 
-st.set_page_config(page_title="AI Finance Controller", layout="wide")
+st.set_page_config(page_title="Raz-recon LOOP", layout="wide")
 
 TOOL_WHY = {
     "get_payment": "Establishes the baseline transaction amount and status.",

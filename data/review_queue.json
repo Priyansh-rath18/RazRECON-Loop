@@ -5,5 +5,19 @@
     "root_cause": "UNKNOWN",
     "confidence": 0.85,
     "amount_at_risk": 2983.36
+  },
+  {
+    "payment_id": "SIM-PAY-002",
+    "queued_at": "2026-09-02T15:25:48.419095",
+    "root_cause": "FEE_MISMATCH",
+    "confidence": 0.95,
+    "amount_at_risk": 85000.0
+  },
+  {
+    "payment_id": "SIM-PAY-003",
+    "queued_at": "2026-09-02T15:25:48.420595",
+    "root_cause": "TAX_MISMATCH",
+    "confidence": 0.89,
+    "amount_at_risk": 2200.0
   }
 ]

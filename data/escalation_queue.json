@@ -1406,5 +1406,13 @@
     "reason": "While the financial reconciliation is explained, the settlement record SET-00079 contains an incorrect net_amount. This requires manual adjustment in the settlement ledger to align with the actual bank credit and refund activity.",
     "amount_at_risk": 128.89,
     "priority": "LOW"
+  },
+  {
+    "payment_id": "SIM-PAY-001",
+    "escalated_at": "2026-09-02T15:25:48.415344",
+    "root_cause": "UTR_MISMATCH",
+    "reason": "Auto-corrected by verification loop: original action 'AUTO_RESOLVE' failed re-verification (WARNING: re-check disagrees \u2014 got ESCALATE.), and confidence (0.72) is too low for lightweight review \u2014 routed to full escalation.",
+    "amount_at_risk": 1500.0,
+    "priority": "LOW"
   }
 ]

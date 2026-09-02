@@ -112,5 +112,23 @@
     "resolved_at": "2026-09-02T12:44:43.435790",
     "root_cause": "DUPLICATE_TRANSACTION",
     "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "SIM-PAY-001",
+    "resolved_at": "2026-09-02T15:25:48.414594",
+    "root_cause": "UTR_MISMATCH",
+    "resolution_reason": "Initial policy pass: high confidence assumed"
+  },
+  {
+    "payment_id": "SIM-PAY-002",
+    "resolved_at": "2026-09-02T15:25:48.419095",
+    "root_cause": "FEE_MISMATCH",
+    "resolution_reason": "Initial policy pass: assumed low-value case"
+  },
+  {
+    "payment_id": "SIM-PAY-003",
+    "resolved_at": "2026-09-02T15:25:48.419845",
+    "root_cause": "TAX_MISMATCH",
+    "resolution_reason": "Initial policy pass: near-threshold confidence rounded up"
   }
 ]

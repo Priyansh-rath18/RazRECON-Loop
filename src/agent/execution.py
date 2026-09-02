@@ -121,12 +121,6 @@ def verify_outcome(payment_id: str, final_action: str, execution_result: dict,
 
 def execute_with_verification_loop(payment_id: str, final_action: str, policy_reason: str,
                                       agent_result: dict, amount_at_risk: float) -> dict:
-    """
-    CONTROLLED ACTION + VERIFY OUTCOME, closed into a real feedback loop:
-    if verification fails, the system automatically corrects course by
-    re-routing to a safer action (ESCALATE), rather than just reporting
-    the failure and stopping.
-    """
     execution_result = execute_action(payment_id, final_action, policy_reason,
                                         agent_result, amount_at_risk)
     verification_result = verify_outcome(payment_id, final_action, execution_result,
@@ -135,22 +129,35 @@ def execute_with_verification_loop(payment_id: str, final_action: str, policy_re
     verification_result["corrected"] = False
 
     if not verification_result["verified"]:
-        print(f"  [LOOP] Verification failed for {payment_id} — auto-correcting to ESCALATE")
+        confidence = agent_result.get("confidence", 0.0)
 
-        corrected_reason = (
-            f"Auto-corrected by verification loop: original action '{final_action}' "
-            f"failed re-verification ({verification_result['notes']})"
-        )
-        execution_result = execute_action(payment_id, "ESCALATE", corrected_reason,
+        if confidence >= 0.75:
+            corrected_action = "REVIEW"
+            corrected_reason = (
+                f"Auto-corrected by verification loop: original action '{final_action}' failed "
+                f"re-verification, but confidence ({confidence}) is high enough for lightweight human confirmation "
+                f"rather than full escalation."
+            )
+        else:
+            corrected_action = "ESCALATE"
+            corrected_reason = (
+                f"Auto-corrected by verification loop: original action '{final_action}' failed "
+                f"re-verification ({verification_result['notes']}), and confidence ({confidence}) is too low "
+                f"for lightweight review — routed to full escalation."
+            )
+
+        print(f"  [LOOP] Verification failed for {payment_id} — auto-correcting to {corrected_action}")
+
+        execution_result = execute_action(payment_id, corrected_action, corrected_reason,
                                              agent_result, amount_at_risk)
-
-        verification_result = verify_outcome(payment_id, "ESCALATE", execution_result,
-                                                amount_at_risk, agent_result.get("confidence", 0.0))
+        verification_result = verify_outcome(payment_id, corrected_action, execution_result,
+                                                amount_at_risk, confidence)
         verification_result["corrected"] = True
         verification_result["original_action"] = final_action
 
     return {"execution": execution_result, "verification": verification_result}
 
+    
 if __name__ == "__main__":
     fake_agent_result = {
         "root_cause": "UTR_MISMATCH",

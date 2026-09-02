@@ -738,12 +738,12 @@ with tab_d:
             else:
                 st.success(f"✅ **Verification PASSED** — {selected_scenario['verification']['notes']}")
 
-    st.info(
-        "These are constructed proof-of-capability scenarios, run through the real "
-        "verification and re-routing logic — not scripted outcomes. No financial record "
-        "is ever modified by this recovery step; only the case's queue assignment changes. "
-        "None of the real exceptions in this dataset happened to trigger a re-route, so "
-        "these scenarios demonstrate the capability directly."
+    st.info("These are constructed proof-of-capability scenarios, run through the real "
+        "verification and re-routing logic — not scripted outcomes. Recovery routes to "
+        "REVIEW or ESCALATE depending on the failure's confidence level, not a single fixed "
+        "outcome. No financial record is ever modified; only the case's queue assignment "
+        "changes. None of the real exceptions in this dataset happened to trigger a re-route, "
+        "so these scenarios demonstrate the capability directly."
     )
 
 

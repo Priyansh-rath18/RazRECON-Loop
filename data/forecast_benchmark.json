@@ -1,0 +1,30 @@
+{
+  "cutoff_date": "2026-08-20",
+  "horizon_results": [
+    {
+      "horizon_days": 1,
+      "forecasted_cash": 880794.76,
+      "actual_cash": 1196872.11,
+      "absolute_error": 316077.35,
+      "naive_baseline_error": 196872.11,
+      "improvement_over_naive_pct": -60.5
+    },
+    {
+      "horizon_days": 3,
+      "forecasted_cash": 884516.0,
+      "actual_cash": 1221697.89,
+      "absolute_error": 337181.89,
+      "naive_baseline_error": 221697.89,
+      "improvement_over_naive_pct": -52.1
+    },
+    {
+      "horizon_days": 7,
+      "forecasted_cash": 839531.04,
+      "actual_cash": 1288554.91,
+      "absolute_error": 449023.87,
+      "naive_baseline_error": 288554.91,
+      "improvement_over_naive_pct": -55.6
+    }
+  ],
+  "mean_absolute_error": 367427.7
+}

@@ -12,6 +12,7 @@ from src.agent.cash_position import cash_forecast
 from src.agent.triage import triage_exceptions
 from src.agent.policy import apply_policy
 from src.agent.priority import calculate_priority
+from src.agent.qa_agent import answer_question
 
 st.set_page_config(page_title="AI Finance Controller", layout="wide")
 
@@ -327,6 +328,31 @@ def render_pattern_clusters():
             st.write(c["insight"])
             st.caption(f"Cases: {', '.join(c['members'])}")
 
+def render_qa_agent(audit_trail):
+    st.subheader("💬 Settlement Q&A")
+    st.caption(
+        "Ask a question in plain English. The agent retrieves real case records from the "
+        "audit trail and answers only from that grounded data — it does not re-investigate "
+        "from scratch."
+    )
+
+    example_questions = [
+        "Why didn't PAY-00046 settle?",
+        "Show me all missing bank entry cases",
+        "What was blocked and why?",
+        "What are the critical priority cases?",
+    ]
+    st.caption("Try: " + " · ".join(f"*{q}*" for q in example_questions))
+
+    question = st.text_input("Your question:", key="qa_question_input")
+
+    if st.button("Ask", key="qa_ask_btn") and question:
+        with st.spinner("Retrieving relevant cases and answering..."):
+            result = answer_question(question, audit_trail)
+        st.markdown("**Answer:**")
+        st.info(result["answer"])
+        st.caption(f"Grounded in: {', '.join(result['cases_used'])}")
+
 # ============================================================
 # TAB A — EXECUTIVE OVERVIEW
 # ============================================================
@@ -437,7 +463,8 @@ with tab_a:
 # ============================================================
 with tab_b:
     st.subheader("Exception Queue")
-
+    render_qa_agent(audit_trail)
+    st.divider()
     st.dataframe(
         df_queue,
         use_container_width=True,

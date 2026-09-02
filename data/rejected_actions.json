@@ -16,5 +16,17 @@
     "rejected_at": "2026-09-01T14:15:52.722360",
     "attempted_action": "ESCALATE",
     "reason": "Refund exceeds original payment amount \u2014 a hard safety rule violation. This action cannot be auto-approved under any confidence level."
+  },
+  {
+    "payment_id": "PAY-00069",
+    "rejected_at": "2026-09-02T12:43:04.525799",
+    "attempted_action": "ESCALATE",
+    "reason": "Refund exceeds original payment amount \u2014 a hard safety rule violation. This action cannot be auto-approved under any confidence level."
+  },
+  {
+    "payment_id": "PAY-00183",
+    "rejected_at": "2026-09-02T12:44:57.874132",
+    "attempted_action": "ESCALATE",
+    "reason": "Refund exceeds original payment amount \u2014 a hard safety rule violation. This action cannot be auto-approved under any confidence level."
   }
 ]

@@ -1,0 +1,9 @@
+[
+  {
+    "payment_id": "PAY-00001",
+    "queued_at": "2026-09-02T12:43:12.948600",
+    "root_cause": "UNKNOWN",
+    "confidence": 0.85,
+    "amount_at_risk": 2983.36
+  }
+]

@@ -10,6 +10,8 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(
 
 from src.agent.cash_position import cash_forecast
 from src.agent.triage import triage_exceptions
+from src.agent.policy import apply_policy
+from src.agent.priority import calculate_priority
 
 st.set_page_config(page_title="AI Finance Controller", layout="wide")
 
@@ -211,6 +213,94 @@ tab_a, tab_b, tab_c, tab_d = st.tabs([
     "🤖 Agent Control Center", "🔄 System Reliability"
 ])
 
+
+def render_what_if_simulator(case_detail):
+    st.markdown("### 🔬 What-If Simulator")
+    st.caption(
+        "Live recalculation using the real policy and priority engines — "
+        "no canned outcomes. Move the sliders and watch the decision change."
+    )
+
+    original_amount = case_detail["amount_at_risk"]
+    original_confidence = case_detail["agent_investigation"]["confidence"]
+    root_cause = case_detail["agent_investigation"]["root_cause"]
+    recommended_action = case_detail["agent_investigation"].get("recommended_action", "ESCALATE")
+
+    col_sliders, col_result = st.columns([1, 1])
+
+    with col_sliders:
+        sim_amount = st.slider(
+            "Amount at risk (₹)",
+            min_value=0.0,
+            max_value=max(200000.0, original_amount * 1.5),
+            value=float(original_amount),
+            step=500.0,
+            key=f"sim_amount_{case_detail['case_id']}"
+        )
+        sim_confidence = st.slider(
+            "Agent confidence",
+            min_value=0.0,
+            max_value=1.0,
+            value=float(original_confidence),
+            step=0.01,
+            key=f"sim_confidence_{case_detail['case_id']}"
+        )
+
+    # --- ORIGINAL, real outcome ---
+    original_agent_result = {
+        "root_cause": root_cause,
+        "recommended_action": recommended_action,
+        "confidence": original_confidence
+    }
+    original_policy = apply_policy(original_agent_result, original_amount)
+    original_priority = calculate_priority(
+        amount_at_risk=original_amount,
+        confidence=original_confidence,
+        root_cause=root_cause
+    )
+
+    # --- SIMULATED outcome, using the SAME real functions, different inputs ---
+    sim_agent_result = {
+        "root_cause": root_cause,
+        "recommended_action": recommended_action,
+        "confidence": sim_confidence
+    }
+    sim_policy = apply_policy(sim_agent_result, sim_amount)
+    sim_priority = calculate_priority(
+        amount_at_risk=sim_amount,
+        confidence=sim_confidence,
+        root_cause=root_cause
+    )
+
+    with col_result:
+        st.markdown("**Original (real case)**")
+        st.markdown(f"Action: `{original_policy['final_action']}`")
+        st.markdown(f"Priority: `{original_priority['priority']} ({original_priority['priority_score']}/{PRIORITY_MAX_SCORE})`")
+
+        st.markdown("**Simulated**")
+        action_changed = sim_policy['final_action'] != original_policy['final_action']
+        priority_changed = sim_priority['priority'] != original_priority['priority']
+
+        if action_changed:
+            st.error(f"Action: `{sim_policy['final_action']}` ⚡ changed")
+        else:
+            st.markdown(f"Action: `{sim_policy['final_action']}` (unchanged)")
+
+        if priority_changed:
+            st.warning(f"Priority: `{sim_priority['priority']} ({sim_priority['priority_score']}/{PRIORITY_MAX_SCORE})` ⚡ changed")
+        else:
+            st.markdown(f"Priority: `{sim_priority['priority']} ({sim_priority['priority_score']}/{PRIORITY_MAX_SCORE})` (unchanged)")
+
+    with st.expander("Why this simulated outcome?"):
+        st.caption(sim_policy["policy_reason"])
+        for text, pts in sim_priority.get("priority_breakdown", []):
+            st.markdown(f"- {text} `+{pts}`")
+
+    st.caption(
+        "This calls the exact same `apply_policy()` and `calculate_priority()` functions "
+        "used across all 65 real cases — nothing here is case-specific or hardcoded."
+    )
+
 # ============================================================
 # TAB A — EXECUTIVE OVERVIEW
 # ============================================================
@@ -388,6 +478,8 @@ with tab_b:
 
     st.divider()
     render_case_journey(case_detail)
+    st.divider()
+    render_what_if_simulator(case_detail)
 
 
 # ============================================================

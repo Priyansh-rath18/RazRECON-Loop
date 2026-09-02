@@ -88,5 +88,29 @@
     "resolved_at": "2026-09-01T14:16:28.015610",
     "root_cause": "AMOUNT_MISMATCH",
     "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00004",
+    "resolved_at": "2026-09-02T12:41:54.576632",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00025",
+    "resolved_at": "2026-09-02T12:43:06.623991",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00187",
+    "resolved_at": "2026-09-02T12:43:17.350117",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
+  },
+  {
+    "payment_id": "PAY-00168",
+    "resolved_at": "2026-09-02T12:44:43.435790",
+    "root_cause": "DUPLICATE_TRANSACTION",
+    "resolution_reason": "High confidence (1.0) and complete evidence support automatic resolution."
   }
 ]

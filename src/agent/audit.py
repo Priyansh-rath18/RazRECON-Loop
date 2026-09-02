@@ -35,7 +35,8 @@ def build_audit_record(case: dict, agent_result: dict, policy_result: dict,
             "root_cause": agent_result.get("root_cause"),
             "explanation": agent_result.get("explanation"),
             "evidence": agent_result.get("evidence"),
-            "confidence": agent_result.get("confidence")
+            "confidence": agent_result.get("confidence"),
+            "recommended_action": agent_result.get("recommended_action")
         },
         "policy_decision": {
             "final_action": policy_result["final_action"],

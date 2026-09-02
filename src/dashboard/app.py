@@ -461,6 +461,8 @@ with tab_a:
         priority_order_list = ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
         priority_counts = df_queue["Priority"].value_counts().reindex(priority_order_list, fill_value=0).reset_index()
         priority_counts.columns = ["Priority", "Count"]
+        priority_counts["Priority"] = pd.Categorical(priority_counts["Priority"], categories=priority_order_list, ordered=True)
+        priority_counts = priority_counts.sort_values("Priority")
         st.markdown("**Priority Distribution**")
         st.bar_chart(priority_counts.set_index("Priority"))
 

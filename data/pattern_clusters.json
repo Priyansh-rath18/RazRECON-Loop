@@ -1,0 +1,70 @@
+[
+  {
+    "cluster_type": "SAME_ROOT_CAUSE_TIME_WINDOW",
+    "root_cause": "AMOUNT_MISMATCH",
+    "label": "6 cases: AMOUNT_MISMATCH within 3 days",
+    "members": [
+      "CASE-0011",
+      "CASE-0033",
+      "CASE-0054",
+      "CASE-0041",
+      "CASE-0002",
+      "CASE-0009"
+    ],
+    "payment_ids": [
+      "PAY-00023",
+      "PAY-00027",
+      "PAY-00041",
+      "PAY-00044",
+      "PAY-00065",
+      "PAY-00048"
+    ],
+    "total_amount": 195634.64,
+    "date_range": "2026-08-07 to 2026-08-11",
+    "insight": "6 'AMOUNT_MISMATCH' exceptions, totaling \u20b9195,634.64, settled within a 3-day window (2026-08-07 to 2026-08-11). This concentration is consistent with a batch-level processing issue during that period, rather than 6 independent, unrelated problems."
+  },
+  {
+    "cluster_type": "SAME_ROOT_CAUSE_TIME_WINDOW",
+    "root_cause": "AMOUNT_MISMATCH",
+    "label": "5 cases: AMOUNT_MISMATCH within 3 days",
+    "members": [
+      "CASE-0031",
+      "CASE-0014",
+      "CASE-0064",
+      "CASE-0004",
+      "CASE-0023"
+    ],
+    "payment_ids": [
+      "PAY-00008",
+      "PAY-00049",
+      "PAY-00053",
+      "PAY-00057",
+      "PAY-00067"
+    ],
+    "total_amount": 111159.23,
+    "date_range": "2026-08-12 to 2026-08-14",
+    "insight": "5 'AMOUNT_MISMATCH' exceptions, totaling \u20b9111,159.23, settled within a 3-day window (2026-08-12 to 2026-08-14). This concentration is consistent with a batch-level processing issue during that period, rather than 5 independent, unrelated problems."
+  },
+  {
+    "cluster_type": "SAME_ROOT_CAUSE_TIME_WINDOW",
+    "root_cause": "AMOUNT_MISMATCH",
+    "label": "5 cases: AMOUNT_MISMATCH within 3 days",
+    "members": [
+      "CASE-0036",
+      "CASE-0021",
+      "CASE-0061",
+      "CASE-0008",
+      "CASE-0059"
+    ],
+    "payment_ids": [
+      "PAY-00137",
+      "PAY-00146",
+      "PAY-00153",
+      "PAY-00151",
+      "PAY-00099"
+    ],
+    "total_amount": 28096.399999999998,
+    "date_range": "2026-08-25 to 2026-08-28",
+    "insight": "5 'AMOUNT_MISMATCH' exceptions, totaling \u20b928,096.40, settled within a 3-day window (2026-08-25 to 2026-08-28). This concentration is consistent with a batch-level processing issue during that period, rather than 5 independent, unrelated problems."
+  }
+]

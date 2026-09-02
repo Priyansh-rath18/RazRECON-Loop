@@ -301,6 +301,32 @@ def render_what_if_simulator(case_detail):
         "used across all 65 real cases — nothing here is case-specific or hardcoded."
     )
 
+@st.cache_data
+def load_pattern_clusters():
+    with open("data/pattern_clusters.json") as f:
+        return json.load(f)
+
+
+def render_pattern_clusters():
+    clusters = load_pattern_clusters()
+
+    st.subheader("🔗 Cross-Case Pattern Detection")
+    st.caption(
+        "Exceptions sharing a root cause AND a tight settlement window are flagged as "
+        "potential systemic issues — not treated as independent problems. Clustering "
+        "requires at least 4 cases and ₹20,000+ combined exposure to avoid coincidental matches."
+    )
+
+    if not clusters:
+        st.info("No materially significant clusters detected in this run.")
+        return
+
+    for c in clusters:
+        with st.container(border=True):
+            st.markdown(f"**{c['label']}**  ·  ₹{c['total_amount']:,.2f}  ·  {c['date_range']}")
+            st.write(c["insight"])
+            st.caption(f"Cases: {', '.join(c['members'])}")
+
 # ============================================================
 # TAB A — EXECUTIVE OVERVIEW
 # ============================================================
@@ -403,7 +429,8 @@ with tab_a:
     st.markdown("**Top contributors to uncertainty (also visible in the Exception Queue):**")
     for c in forecast[0]["top_uncertainty_contributors"]:
         st.markdown(f"- `{c['payment_id']}`: ₹{c['amount_at_risk']:,.2f}")
-
+    st.divider()
+    render_pattern_clusters()
 
 # ============================================================
 # TAB B — EXCEPTION OPERATIONS
